@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Desai - ML & Computer Vision Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.2);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: #1e293b;
+            --surface-light: #334155;
+            --success: #10b981;
+            --grid: rgba(148, 163, 184, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Floating gradient orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--accent);
+            top: -200px;
+            right: -200px;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--success);
+            bottom: -150px;
+            left: -150px;
+            animation: float 12s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 50px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 6rem;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out 0.3s backwards;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1s ease-out 0.5s backwards;
+        }
+
+        .tagline {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out 0.7s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            animation: fadeIn 1s ease-out 0.9s backwards;
+        }
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--surface-light);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--accent-glow), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .link-btn:hover::before {
+            left: 100%;
+        }
+
+        .link-btn.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Metrics */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .metric-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-light);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out backwards;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:nth-child(1) { animation-delay: 0.2s; }
+        .metric-card:nth-child(2) { animation-delay: 0.3s; }
+        .metric-card:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            transform-origin: left;
+        }
+
+        .metric-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .metric-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .metric-value {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Projects */
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .projects {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-light);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: slideUp 0.8s ease-out backwards;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.3s; }
+        .project-card:nth-child(2) { animation-delay: 0.4s; }
+        .project-card:nth-child(3) { animation-delay: 0.5s; }
+        .project-card:nth-child(4) { animation-delay: 0.6s; }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateX(10px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .project-year {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            border-radius: 4px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Experience */
+        .experience {
+            margin-bottom: 6rem;
+        }
+
+        .exp-item {
+            background: var(--surface);
+            border: 1px solid var(--surface-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: slideUp 0.8s ease-out backwards;
+        }
+
+        .exp-item:nth-child(1) { animation-delay: 0.2s; }
+        .exp-item:nth-child(2) { animation-delay: 0.3s; }
+        .exp-item:nth-child(3) { animation-delay: 0.4s; }
+        .exp-item:nth-child(4) { animation-delay: 0.5s; }
+
+        .exp-item:hover {
+            border-color: var(--accent);
+            transform: translateX(10px);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .exp-role {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .exp-company {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .exp-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .exp-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid var(--surface-light);
+            margin-top: 6rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 2rem 0 4rem;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .exp-header {
+                flex-direction: column;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: bounce 2s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-indicator::after {
+            content: '↓';
+            display: block;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="status">
+                <span class="status-dot"></span>
+                Available for opportunities
+            </div>
+            <h1>Dhruv Desai</h1>
+            <p class="tagline">Building ML and computer vision systems that solve real problems</p>
+            <div class="links">
+                <a href="https://github.com/DhruvDesai263" class="link-btn primary" target="_blank">
+                    <span>→</span> GitHub
+                </a>
+                <a href="https://linkedin.com/in/dhruv-desai-895534209" class="link-btn" target="_blank">
+                    <span>→</span> LinkedIn
+                </a>
+                <a href="https://kaggle.com/dhruvdesai263" class="link-btn" target="_blank">
+                    <span>→</span> Kaggle
+                </a>
+                <a href="mailto:DhruvDesai3263@gmail.com" class="link-btn" target="_blank">
+                    <span>→</span> Email
+                </a>
+            </div>
+        </header>
+
+        <section class="metrics">
+            <div class="metric-card">
+                <span class="metric-value">95%</span>
+                <span class="metric-label">Detection Accuracy</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">70%</span>
+                <span class="metric-label">Time Reduction</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">15+</span>
+                <span class="metric-label">Projects Delivered</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">CV Road & Lane Detection</h3>
+                            <p class="project-year">2025</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Real-time detection system using OpenCV and ML achieving 95% accuracy. Reduced manual annotation time by 70% for autonomous driving applications.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">ML</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">Blockchain Certificate Platform</h3>
+                            <p class="project-year">2024</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Enhanced Flutter-based certificate verification system with 60% faster verification and 90% fraud reduction using blockchain technology.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Blockchain</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Smart Contracts</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">AR-VR Educational Game</h3>
+                            <p class="project-year">2022</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Immersive educational game built with Unity and C# featuring custom 3D assets created in Blender for enhanced learning experiences.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">AR/VR</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">ML Game Success Predictor</h3>
+                            <p class="project-year">2022</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Supervised learning models achieving 85% accuracy in predicting game sales success based on market trends and player preferences.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <p class="exp-role">Machine Learning Intern at <span class="exp-company">RoadMetrics</span></p>
+                    </div>
+                    <p class="exp-date">Jan 2025 – May 2025</p>
+                </div>
+                <p class="exp-description">
+                    Pioneered an OpenCV-based road/lane detection prototype, reducing manual annotation time by 70% and accelerating ML training for self-driving systems. Achieved 95% accuracy in real-time object detection, improving system reliability by 40%.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <p class="exp-role">Data Science Intern at <span class="exp-company">Topia Life Science</span></p>
+                    </div>
+                    <p class="exp-date">May 2024 – Dec 2024</p>
+                </div>
+                <p class="exp-description">
+                    Applied machine learning techniques to analyze complex life science datasets containing 10,000+ records. Conducted comprehensive data analysis and model validation, improving prediction accuracy by 25%.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <p class="exp-role">Data Science Intern at <span class="exp-company">Teachnook</span></p>
+                    </div>
+                    <p class="exp-date">April 2023 – June 2023</p>
+                </div>
+                <p class="exp-description">
+                    Performed exploratory data analysis on datasets exceeding 1TB, extracting actionable insights and building data pipelines for large-scale processing.
+                </p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <p class="exp-role">Machine Learning Intern at <span class="exp-company">Rinex</span></p>
+                    </div>
+                    <p class="exp-date">Dec 2022 – Jan 2023</p>
+                </div>
+                <p class="exp-description">
+                    Implemented 5+ supervised learning models for classification and regression tasks, gaining foundational experience in ML model development and deployment.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Dhruv Desai. Built with passion for ML & Computer Vision.</p>
+        </footer>
+    </div>
+
+    <div class="scroll-indicator">Scroll</div>
+
+    <script>
+        // Hide scroll indicator after scrolling
+        window.addEventListener('scroll', () => {
+            const indicator = document.querySelector('.scroll-indicator');
+            if (window.scrollY > 100) {
+                indicator.style.opacity = '0';
+            } else {
+                indicator.style.opacity = '1';
+            }
+        });
+
+        // Add stagger animation on scroll for project cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .exp-item').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
