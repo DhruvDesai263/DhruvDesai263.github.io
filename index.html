@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhruv Desai | Creative Technologist, Interactive Product Engineer & AI Evaluation Specialist</title>
-  <meta name="description" content="Portfolio of Dhruv Desai - Interactive Digital Products, Computer Vision, Visual Media Quality, and Frontier AI Evaluation & Benchmark Authoring.">
+  <title>Dhruv Desai | Machine Learning & Computer Vision Engineer</title>
+  <meta name="description" content="Portfolio of Dhruv Desai - Machine Learning, Computer Vision, and Full-Stack Engineering.">
   <meta name="author" content="Dhruv Desai">
 
   <style>
@@ -17,14 +17,11 @@
       --border-highlight: rgba(99, 102, 241, 0.4);
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
-      --text-dim: #6b7280;
       --accent-indigo: #6366f1;
       --accent-cyan: #06b6d4;
       --accent-emerald: #10b981;
       --accent-amber: #f59e0b;
-      --accent-rose: #f43f5e;
-      --gradient-brand: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #10b981 100%);
-      --gradient-dark: linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 14, 23, 0.95) 100%);
+      --gradient-brand: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
@@ -55,37 +52,10 @@
       background-attachment: fixed;
     }
 
-    /* Container */
     .container {
-      max-width: 1200px;
+      max-width: 1160px;
       margin: 0 auto;
       padding: 0 24px;
-    }
-
-    /* Top Banner / Mercor Bar */
-    .top-banner {
-      background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
-      border-bottom: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 8px 16px;
-      font-size: 0.85rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      font-weight: 500;
-    }
-
-    .badge-pill {
-      background: rgba(99, 102, 241, 0.3);
-      border: 1px solid var(--accent-indigo);
-      color: #c7d2fe;
-      padding: 2px 10px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
     }
 
     /* Navbar */
@@ -93,17 +63,16 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(10, 14, 23, 0.85);
+      background: rgba(10, 14, 23, 0.88);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
-      transition: all 0.3s ease;
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 70px;
     }
 
     .nav-brand {
@@ -115,8 +84,8 @@
     }
 
     .nav-avatar {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 10px;
       background: var(--gradient-brand);
       display: flex;
@@ -124,18 +93,18 @@
       justify-content: center;
       font-weight: 700;
       color: #fff;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
     }
 
     .nav-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: -0.3px;
     }
 
     .nav-role {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--accent-cyan);
       display: block;
       line-height: 1.1;
@@ -144,7 +113,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
       list-style: none;
     }
 
@@ -163,14 +132,14 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: var(--radius-sm);
       font-size: 0.88rem;
       font-weight: 600;
@@ -202,25 +171,14 @@
       border-color: rgba(255, 255, 255, 0.2);
     }
 
-    .btn-emerald {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: rgba(16, 185, 129, 0.3);
-      color: #6ee7b7;
-    }
-
-    .btn-emerald:hover {
-      background: rgba(16, 185, 129, 0.25);
-    }
-
     /* Hero Section */
     .hero {
-      padding: 70px 0 50px;
-      position: relative;
+      padding: 65px 0 45px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.3fr 0.7fr;
       gap: 40px;
       align-items: center;
     }
@@ -229,7 +187,7 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .hero-tag {
@@ -244,7 +202,7 @@
       gap: 6px;
     }
 
-    .hero-tag.live-indicator::before {
+    .hero-tag.active-tag::before {
       content: '';
       width: 8px;
       height: 8px;
@@ -268,31 +226,84 @@
     }
 
     .hero-lead {
-      font-size: 1.12rem;
+      font-size: 1.1rem;
       color: #cbd5e1;
-      margin-bottom: 28px;
-      max-width: 620px;
-      line-height: 1.7;
+      margin-bottom: 26px;
+      line-height: 1.65;
     }
 
     .hero-cta {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
+    /* Quick Info Card */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-brand);
+    }
+
+    .profile-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .profile-info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .profile-info-item strong {
+      color: var(--text-main);
+      min-width: 80px;
+      font-size: 0.85rem;
+    }
+
+    .profile-info-item a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    .profile-info-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metrics Grid */
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 36px;
-      padding-top: 28px;
+      margin-top: 32px;
+      padding-top: 24px;
       border-top: 1px solid var(--border-color);
     }
 
     .metric-card {
-      background: rgba(17, 24, 39, 0.5);
+      background: rgba(17, 24, 39, 0.6);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
       padding: 16px;
@@ -317,390 +328,48 @@
       font-size: 0.78rem;
       color: var(--text-muted);
       margin-top: 6px;
-      line-height: 1.3;
-    }
-
-    /* Hero Card / Profile Card */
-    .profile-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-card);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-brand);
-    }
-
-    .card-header-badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--accent-cyan);
-      margin-bottom: 10px;
-    }
-
-    .profile-info-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .profile-info-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .profile-info-item strong {
-      color: var(--text-main);
-      min-width: 90px;
-      font-size: 0.85rem;
-    }
-
-    .profile-info-item a {
-      color: var(--accent-cyan);
-      text-decoration: none;
-    }
-
-    .profile-info-item a:hover {
-      text-decoration: underline;
+      line-height: 1.35;
     }
 
     /* Section Styling */
     section {
-      padding: 60px 0;
-      position: relative;
+      padding: 55px 0;
     }
 
     .section-header {
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 46px;
+      max-width: 700px;
+      margin: 0 auto 40px;
     }
 
     .section-tag {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--accent-indigo);
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .section-title {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 800;
       letter-spacing: -0.5px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .section-desc {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--text-muted);
       line-height: 1.6;
-    }
-
-    /* 5 Competency Pillars */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-bottom: 40px;
-    }
-
-    .pillar-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      transition: all 0.25s ease;
-      position: relative;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border-highlight);
-      background: var(--bg-card-hover);
-    }
-
-    .pillar-num {
-      font-size: 0.8rem;
-      font-weight: 700;
-      font-family: monospace;
-      color: var(--accent-cyan);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .pillar-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .pillar-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    .pillar-skills {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .skill-micro {
-      font-size: 0.72rem;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 2px 8px;
-      border-radius: 4px;
-      color: #94a3b8;
-    }
-
-    /* Featured Case Study: AI Benchmark Interactive Sandbox */
-    .benchmark-container {
-      background: var(--gradient-dark);
-      border: 1px solid rgba(99, 102, 241, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-      position: relative;
-      margin-bottom: 50px;
-    }
-
-    .benchmark-badge-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border-color);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .benchmark-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 24px;
-      overflow-x: auto;
-      padding-bottom: 6px;
-    }
-
-    .tab-btn {
-      padding: 10px 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s;
-    }
-
-    .tab-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-    }
-
-    .tab-btn.active {
-      background: var(--accent-indigo);
-      border-color: var(--accent-indigo);
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
-    }
-
-    .tab-pane {
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .tab-pane.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .brief-spec-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .spec-box {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 20px;
-    }
-
-    .spec-box h4 {
-      font-size: 0.95rem;
-      color: var(--accent-cyan);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .spec-list {
-      list-style: none;
-      font-size: 0.88rem;
-      color: #cbd5e1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .spec-list li {
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .spec-list li::before {
-      content: '▹';
-      position: absolute;
-      left: 0;
-      color: var(--accent-indigo);
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .comparison-card {
-      border-radius: var(--radius-sm);
-      padding: 20px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--border-color);
-    }
-
-    .comparison-card.gold-standard {
-      border-color: rgba(16, 185, 129, 0.5);
-      background: rgba(6, 78, 59, 0.15);
-    }
-
-    .comparison-card.ai-failed {
-      border-color: rgba(244, 63, 94, 0.4);
-      background: rgba(136, 19, 55, 0.15);
-    }
-
-    .comp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-    }
-
-    .comp-badge {
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      text-transform: uppercase;
-    }
-
-    .comp-badge.pass { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid var(--accent-emerald); }
-    .comp-badge.fail { background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid var(--accent-rose); }
-
-    .rubric-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 14px;
-    }
-
-    .rubric-table th, .rubric-table td {
-      padding: 12px 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .rubric-table th {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
-    .score-chip {
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-    }
-
-    .score-chip.high { background: rgba(16, 185, 129, 0.2); color: #34d399; }
-    .score-chip.low { background: rgba(244, 63, 94, 0.2); color: #fb7185; }
-
-    /* Filter Controls */
-    .filter-bar {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 34px;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      padding: 8px 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-color);
-      border-radius: 999px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .filter-btn.active {
-      background: var(--text-main);
-      color: #0a0e17;
-      font-weight: 600;
-      border-color: #fff;
     }
 
     /* Projects Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
     }
 
     .project-card {
@@ -710,86 +379,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: all 0.3s ease;
-      position: relative;
+      transition: all 0.25s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       border-color: var(--border-highlight);
       box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
-    }
-
-    .project-visual {
-      height: 180px;
-      background: #1e293b;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border-color);
-      overflow: hidden;
-    }
-
-    .visual-pattern-cv {
-      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .visual-pattern-web {
-      background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .visual-pattern-game {
-      background: linear-gradient(135deg, #4c1d95 0%, #0f172a 100%);
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .visual-pattern-iot {
-      background: linear-gradient(135deg, #083344 0%, #0f172a 100%);
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .visual-icon {
-      font-size: 2.8rem;
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
-    }
-
-    .project-badge-float {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-color);
-      color: var(--accent-cyan);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .project-body {
@@ -799,17 +395,26 @@
       flex-grow: 1;
     }
 
-    .project-role-tag {
+    .project-head-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .project-year {
       font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--accent-indigo);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-family: monospace;
     }
 
     .project-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 10px;
       color: #fff;
@@ -818,32 +423,32 @@
 
     .project-desc {
       font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      line-height: 1.55;
       flex-grow: 1;
     }
 
-    .eval-highlight-box {
-      background: rgba(99, 102, 241, 0.08);
-      border-left: 3px solid var(--accent-indigo);
-      padding: 10px 14px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin-bottom: 18px;
+    .project-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: #94a3b8;
     }
 
-    .eval-highlight-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #a5b4fc;
-      margin-bottom: 3px;
+    .project-bullets li {
+      position: relative;
+      padding-left: 16px;
     }
 
-    .eval-highlight-desc {
-      font-size: 0.82rem;
-      color: #e2e8f0;
-      line-height: 1.45;
+    .project-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent-indigo);
     }
 
     .tech-tags {
@@ -857,7 +462,7 @@
       font-size: 0.72rem;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border-color);
-      padding: 3px 9px;
+      padding: 3px 8px;
       border-radius: 4px;
       color: #94a3b8;
     }
@@ -872,7 +477,7 @@
     .timeline::before {
       content: '';
       position: absolute;
-      left: 30px;
+      left: 24px;
       top: 0;
       bottom: 0;
       width: 2px;
@@ -881,13 +486,13 @@
 
     .timeline-item {
       position: relative;
-      padding-left: 80px;
-      margin-bottom: 40px;
+      padding-left: 68px;
+      margin-bottom: 34px;
     }
 
     .timeline-dot {
       position: absolute;
-      left: 21px;
+      left: 15px;
       top: 4px;
       width: 20px;
       height: 20px;
@@ -901,7 +506,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 22px;
     }
 
     .timeline-header {
@@ -920,7 +525,7 @@
     }
 
     .timeline-company {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--accent-cyan);
       font-weight: 600;
     }
@@ -958,33 +563,27 @@
     }
 
     /* Skills Grid */
-    .skills-category-grid {
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .skill-category-card {
+    .skill-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 22px;
     }
 
-    .skill-cat-title {
+    .skill-card-title {
       font-size: 1rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 10px;
-    }
-
-    .skill-cat-title svg {
-      width: 18px;
-      height: 18px;
-      color: var(--accent-cyan);
+      gap: 8px;
     }
 
     .pill-cloud {
@@ -1000,55 +599,33 @@
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
       color: #e2e8f0;
-      transition: all 0.2s;
     }
 
-    .pill-item:hover {
-      border-color: var(--accent-indigo);
-      background: rgba(99, 102, 241, 0.1);
-      color: #fff;
+    /* Education & Certifications */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
 
-    /* Footer / CTA Card */
-    .submission-callout {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15));
-      border: 1px solid rgba(99, 102, 241, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 44px;
-      text-align: center;
-      margin: 40px 0 70px;
-      position: relative;
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
     }
 
-    .submission-title {
-      font-size: 1.85rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .submission-text {
-      color: #cbd5e1;
-      max-width: 640px;
-      margin: 0 auto 28px;
-      font-size: 1rem;
-    }
-
-    .submission-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
+    /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
-      padding: 30px 0;
+      padding: 32px 0;
       text-align: center;
       font-size: 0.85rem;
-      color: var(--text-dim);
+      color: var(--text-muted);
+      margin-top: 40px;
     }
 
-    /* Toast notification */
+    /* Toast */
     .toast {
       position: fixed;
       bottom: 24px;
@@ -1072,13 +649,11 @@
       transform: translateY(0);
     }
 
-    /* Responsive adjustments */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-title { font-size: 2.2rem; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-      .brief-spec-grid { grid-template-columns: 1fr; }
-      .comparison-grid { grid-template-columns: 1fr; }
+      .edu-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
 
@@ -1086,79 +661,42 @@
       .hero-title { font-size: 1.85rem; }
       .metrics-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
-      .submission-callout { padding: 24px; }
     }
 
-    /* Print Stylesheet for Option 1 PDF Generation */
     @media print {
       body {
         background: #fff !important;
         color: #000 !important;
         background-image: none !important;
       }
-      .top-banner, .navbar, .filter-bar, .hero-cta, .submission-actions, .toast, .no-print {
+      .navbar, .hero-cta, .nav-actions, .toast, .no-print {
         display: none !important;
       }
       .container {
         max-width: 100% !important;
         padding: 0 !important;
       }
-      .hero {
-        padding: 10px 0 20px !important;
-      }
-      .hero-title {
-        color: #111827 !important;
-        font-size: 2rem !important;
-      }
-      .gradient-text {
-        -webkit-text-fill-color: #111827 !important;
-        color: #111827 !important;
-      }
-      .profile-card, .metric-card, .pillar-card, .benchmark-container, .project-card, .timeline-card, .skill-category-card {
+      .profile-card, .metric-card, .project-card, .timeline-card, .skill-card, .edu-card {
         background: #fff !important;
         border: 1px solid #d1d5db !important;
         color: #111827 !important;
         box-shadow: none !important;
         page-break-inside: avoid;
       }
-      .project-title, .timeline-title, .pillar-title {
+      .project-title, .timeline-title, .hero-title {
         color: #111827 !important;
       }
-      .project-desc, .hero-lead, .timeline-bullets {
-        color: #374151 !important;
-      }
-      .tech-tag, .skill-micro, .pill-item {
-        border: 1px solid #cbd5e1 !important;
-        color: #334155 !important;
-      }
-      .eval-highlight-box {
-        background: #f1f5f9 !important;
-        border-left: 3px solid #4f46e5 !important;
-      }
-      .eval-highlight-desc {
-        color: #1e293b !important;
-      }
-      .rubric-table th {
-        background: #f1f5f9 !important;
-        color: #1e293b !important;
-      }
-      .rubric-table td {
-        color: #1e293b !important;
+      .gradient-text {
+        -webkit-text-fill-color: #111827 !important;
       }
       a {
-        text-decoration: none !important;
         color: #111827 !important;
+        text-decoration: none !important;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top Mercor Banner -->
-  <div class="top-banner">
-    <span class="badge-pill">Mercor Candidate Portfolio</span>
-    <span>Target Role: <strong>Creative & Media Expert</strong> ($80–$90/hr) • Benchmark Authoring & AI Evaluation</span>
-  </div>
 
   <!-- Navbar -->
   <header class="navbar">
@@ -1168,27 +706,26 @@
           <div class="nav-avatar">DD</div>
           <div>
             <div class="nav-title">Dhruv Desai</div>
-            <span class="nav-role">Interactive Products & AI Evaluation</span>
+            <span class="nav-role">Machine Learning & Computer Vision</span>
           </div>
         </a>
 
         <ul class="nav-links">
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#competencies">Evaluation Pillars</a></li>
-          <li><a href="#case-study">AI Benchmark Task</a></li>
-          <li><a href="#projects">Work & Projects</a></li>
+          <li><a href="#overview">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Tooling</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
         </ul>
 
         <div class="nav-actions">
-          <button class="btn btn-secondary no-print" onclick="copyPortfolioLink()" title="Copy live URL for Mercor Field 2">
+          <button class="btn btn-secondary no-print" onclick="copyPortfolioLink()" title="Copy live URL">
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
             <span>Copy Link</span>
           </button>
-          <button class="btn btn-primary no-print" onclick="window.print()" title="Print / Save PDF for Mercor Field 1">
+          <button class="btn btn-primary no-print" onclick="window.print()" title="Print / Save PDF">
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span>Save as PDF</span>
+            <span>Print PDF</span>
           </button>
         </div>
       </div>
@@ -1201,45 +738,40 @@
       <div class="hero-grid">
         <div>
           <div class="hero-meta">
-            <span class="hero-tag live-indicator">Open for Mercor Hourly Engagement</span>
-            <span class="hero-tag">Computer Engineering Graduate (2025)</span>
+            <span class="hero-tag active-tag">AI/ML Engineer</span>
+            <span class="hero-tag">B.Tech Computer Engineering (2025)</span>
             <span class="hero-tag">Surat, Gujarat, India</span>
           </div>
 
           <h1 class="hero-title">
-            Crafting & Evaluating <span class="gradient-text">Interactive Digital Products</span> & Visual Media at Scale.
+            Hi, I'm <span class="gradient-text">Dhruv Desai</span>
           </h1>
 
           <p class="hero-lead">
-            Experienced technologist blending <strong>full-stack web architecture (Angular/Java)</strong>, <strong>high-fidelity computer vision pipelines (OpenCV)</strong>, and <strong>rigorous AI evaluation methodologies</strong>. Proven track record establishing ground-truth datasets, authoring evaluation rubrics, and judging generative model outputs across content precision and technical craft.
+            Computer Engineering graduate (B.Tech, Charusat University, 2025) with roughly 2.5 years of combined AI/ML experience, including an ML Engineer role at RoadMetrics and three earlier internships spanning computer vision, exploratory data analysis, and supervised learning. Built a real-time OpenCV-based lane detection prototype reaching 95% accuracy. Comfortable across Python, Scikit-learn, OpenCV, FastAPI, and Docker.
           </p>
 
           <div class="hero-cta no-print">
-            <a href="#case-study" class="btn btn-primary">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              <span>Explore AI Benchmark Case Study</span>
+            <a href="#projects" class="btn btn-primary">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <span>View Projects</span>
             </a>
-            <a href="#projects" class="btn btn-secondary">
-              <span>View Production Portfolio</span>
+            <a href="#experience" class="btn btn-secondary">
+              <span>Work Experience</span>
             </a>
-            <a href="https://github.com/DhruvDesai263" target="_blank" rel="noopener" class="btn btn-emerald">
+            <a href="https://github.com/DhruvDesai263" target="_blank" rel="noopener" class="btn btn-secondary">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>GitHub @DhruvDesai263</span>
+              <span>GitHub Profile</span>
             </a>
           </div>
         </div>
 
-        <!-- Profile Quick Card -->
+        <!-- Quick Info Card -->
         <div class="profile-card">
-          <span class="card-header-badge">Candidate Verification File</span>
-          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Dhruv Desai</h3>
-          <p style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 500;">B.Tech Computer Engineering (2025)</p>
+          <h3 style="font-size: 1.35rem; margin-bottom: 4px;">Dhruv Desai</h3>
+          <p style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 500;">B.Tech in Computer Engineering (2025)</p>
           
           <ul class="profile-info-list">
-            <li class="profile-info-item">
-              <strong>Role Focus:</strong>
-              <span>Creative & Media Expert ($80–$90/hr)</span>
-            </li>
             <li class="profile-info-item">
               <strong>Email:</strong>
               <a href="mailto:DhruvDesai3263@gmail.com">DhruvDesai3263@gmail.com</a>
@@ -1249,593 +781,54 @@
               <span>+91 9510312885</span>
             </li>
             <li class="profile-info-item">
+              <strong>Location:</strong>
+              <span>Surat, Gujarat, India</span>
+            </li>
+            <li class="profile-info-item">
               <strong>GitHub:</strong>
               <a href="https://github.com/DhruvDesai263" target="_blank" rel="noopener">github.com/DhruvDesai263</a>
             </li>
             <li class="profile-info-item">
-              <strong>Portfolio Link:</strong>
+              <strong>Portfolio:</strong>
               <a href="https://dhruvdesai263.github.io/" target="_blank" rel="noopener">dhruvdesai263.github.io</a>
-            </li>
-            <li class="profile-info-item">
-              <strong>Location:</strong>
-              <span>Surat, Gujarat, India (Remote Ready)</span>
             </li>
           </ul>
 
-          <div style="background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: var(--radius-sm); padding: 12px; font-size: 0.8rem; color: var(--text-muted);">
-            <strong style="color:#fff;">Mercor Submission Note:</strong> Use this page directly for <em>Option 2 (Public Link)</em>, or click <em>"Save as PDF"</em> above to generate the file for <em>Option 1 (Upload)</em>.
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 10px; font-size: 0.8rem; color: var(--text-muted);">
+            Charusat University, Changa, Anand, India (Sept 2022 - May 2025)
           </div>
         </div>
       </div>
 
-      <!-- Key Metrics -->
+      <!-- Key Metrics Bar -->
       <div class="metrics-grid">
         <div class="metric-card">
           <span class="metric-value indigo">95%</span>
-          <div class="metric-label">Object & Lane Detection Accuracy in Real-Time Vision Pipelines</div>
+          <div class="metric-label">Real-Time Object & Lane Detection Accuracy at RoadMetrics</div>
         </div>
         <div class="metric-card">
           <span class="metric-value cyan">70%</span>
-          <div class="metric-label">Reduction in Manual Annotation Effort via Ground-Truth Automation</div>
+          <div class="metric-label">Reduction in Manual Annotation Effort via Automated Pipelines</div>
         </div>
         <div class="metric-card">
           <span class="metric-value emerald">~40%</span>
-          <div class="metric-label">Uplift in Visual Media Quality via Automated Image Capture Pipeline</div>
+          <div class="metric-label">Output Quality Improvement via Smart Image Capture</div>
         </div>
         <div class="metric-card">
           <span class="metric-value amber">&gt;1 TB</span>
-          <div class="metric-label">Data Analysis & Multi-Modal Dataset Engineering for Enterprise Insights</div>
+          <div class="metric-label">Exploratory Data Analysis Across Datasets at Teachnook</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Competency Pillars Aligned with Mercor -->
-  <section id="competencies">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Role Alignment</span>
-        <h2 class="section-title">Evaluation Expertise Across the 5 Mercor Areas</h2>
-        <p class="section-desc">
-          Frontier AI evaluation requires both high-end technical proficiency and deep creative discernment. Here is how my production experience maps to Mercor’s core evaluation scope.
-        </p>
-      </div>
-
-      <div class="pillars-grid">
-        <!-- Area 1 -->
-        <div class="pillar-card">
-          <span class="pillar-num">AREA 01</span>
-          <h3 class="pillar-title">Interactive Digital Products</h3>
-          <p class="pillar-desc">
-            Evaluating web applications, responsive layouts, DOM tree semantics, state management, and HTML-based interactive experiences against production engineering standards.
-          </p>
-          <div class="pillar-skills">
-            <span class="skill-micro">Angular</span>
-            <span class="skill-micro">HTML5 / CSS3</span>
-            <span class="skill-micro">Responsive Grid</span>
-            <span class="skill-micro">DOM Semantics</span>
-            <span class="skill-micro">Flutter UI</span>
-          </div>
-        </div>
-
-        <!-- Area 2 -->
-        <div class="pillar-card">
-          <span class="pillar-num">AREA 02</span>
-          <h3 class="pillar-title">Visual Media & Image Quality</h3>
-          <p class="pillar-desc">
-            Computer vision-driven inspection of visual artifacts, edge sharpness, noise levels, color space consistency, and temporal consistency in video frames.
-          </p>
-          <div class="pillar-skills">
-            <span class="skill-micro">OpenCV</span>
-            <span class="skill-micro">Image Processing</span>
-            <span class="skill-micro">Video Analysis</span>
-            <span class="skill-micro">Blur Detection</span>
-            <span class="skill-micro">Artifact Auditing</span>
-          </div>
-        </div>
-
-        <!-- Area 3 -->
-        <div class="pillar-card">
-          <span class="pillar-num">AREA 03</span>
-          <h3 class="pillar-title">AI Benchmark Authoring</h3>
-          <p class="pillar-desc">
-            Drafting realistic client creative briefs, compiling messy raw input assets, authoring gold-standard reference deliverables, and designing scoring rubrics.
-          </p>
-          <div class="pillar-skills">
-            <span class="skill-micro">Brief Writing</span>
-            <span class="skill-micro">Ground Truth Curation</span>
-            <span class="skill-micro">Rubric Design</span>
-            <span class="skill-micro">Constraint Testing</span>
-          </div>
-        </div>
-
-        <!-- Area 4 -->
-        <div class="pillar-card">
-          <span class="pillar-num">AREA 04</span>
-          <h3 class="pillar-title">Side-by-Side Craft Critique</h3>
-          <p class="pillar-desc">
-            Articulating why one deliverable outperforms another across typographic hierarchy, spatial rhythm, cognitive load, negative space, and brand voice fidelity.
-          </p>
-          <div class="pillar-skills">
-            <span class="skill-micro">Typographic Rhythm</span>
-            <span class="skill-micro">Layout Hierarchy</span>
-            <span class="skill-micro">Color Contrast</span>
-            <span class="skill-micro">Written Rationales</span>
-          </div>
-        </div>
-
-        <!-- Area 5 -->
-        <div class="pillar-card">
-          <span class="pillar-num">AREA 05</span>
-          <h3 class="pillar-title">Enterprise Communication</h3>
-          <p class="pillar-desc">
-            Distilling complex datasets (>10,000 biological records, >1TB datasets) into executive summaries, clear technical documentation, and structured evaluation reports.
-          </p>
-          <div class="pillar-skills">
-            <span class="skill-micro">Data Storytelling</span>
-            <span class="skill-micro">Technical Decks</span>
-            <span class="skill-micro">Model Reporting</span>
-            <span class="skill-micro">Executive Insights</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive AI Benchmark Task Case Study -->
-  <section id="case-study" style="padding-top: 20px;">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Featured Evaluation Artifact</span>
-        <h2 class="section-title">Sample Benchmark Task: Interactive Product & Visual UI</h2>
-        <p class="section-desc">
-          An end-to-end demonstration of the exact deliverables required by Mercor: a realistic client brief, input asset package, reference standard, side-by-side AI critique, and scoring rubric.
-        </p>
-      </div>
-
-      <div class="benchmark-container">
-        <div class="benchmark-badge-bar">
-          <div>
-            <span class="badge-pill" style="margin-right: 8px;">Evaluation Task ID: AGY-EVAL-2026-04</span>
-            <strong style="color: #fff; font-size: 0.95rem;">Interactive Telemetry Dashboard & Responsive Web Component</strong>
-          </div>
-          <span style="font-size: 0.8rem; color: var(--accent-cyan); font-family: monospace;">Calibrated Standard: Senior Lead Frontend & Media Quality</span>
-        </div>
-
-        <!-- Interactive Tabs -->
-        <div class="benchmark-tabs">
-          <button class="tab-btn active" onclick="switchTab(event, 'tab-brief')">1. The Creative Brief</button>
-          <button class="tab-btn" onclick="switchTab(event, 'tab-inputs')">2. Input Asset Manifest</button>
-          <button class="tab-btn" onclick="switchTab(event, 'tab-gold')">3. Gold-Standard Reference</button>
-          <button class="tab-btn" onclick="switchTab(event, 'tab-comparison')">4. AI Output vs. Human Reference</button>
-          <button class="tab-btn" onclick="switchTab(event, 'tab-rubric')">5. Evaluation Rubric & Rationales</button>
-        </div>
-
-        <!-- Tab 1: Brief -->
-        <div class="tab-pane active" id="tab-brief">
-          <div class="brief-spec-grid">
-            <div class="spec-box">
-              <h4>
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                Task Objective & Context
-              </h4>
-              <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
-                <strong>Client Scenario:</strong> A marine tech startup deploying autonomous aquaculture telemetry sensors needs a high-performance, responsive live monitoring widget to be embedded in their executive web portal.
-              </p>
-              <ul class="spec-list">
-                <li><strong>Target Audience:</strong> Operations Directors and Field Biologists monitoring water parameters across multiple remote sites.</li>
-                <li><strong>Single End Deliverable:</strong> A production-ready, accessible, standalone HTML/CSS/JS interactive dashboard widget.</li>
-                <li><strong>Key Functionality:</strong> Real-time gauge visualization (DO, pH, Temp), status threshold alerts (Normal / Warning / Critical), and responsive reflow down to 320px viewport.</li>
-              </ul>
-            </div>
-
-            <div class="spec-box">
-              <h4>
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                Strict Constraints & Failure Conditions
-              </h4>
-              <ul class="spec-list">
-                <li><strong>Strict Zero-External Dependency:</strong> No heavy external charting libraries (e.g. Highcharts/Chart.js); must be executed via semantic SVG and vanilla CSS/JS.</li>
-                <li><strong>Accessibility Requirement:</strong> Strict WCAG 2.1 AA compliance (contrast ratio ≥ 4.5:1 for body copy; full ARIA live region support for metric updates).</li>
-                <li><strong>Negative Constraint:</strong> No visual horizontal overflow at 375px width; no hallucinated CSS properties or deprecated layout modes (e.g. floats).</li>
-                <li><strong>Performance Budget:</strong> Total payload &lt; 25KB uncompressed, zero layout shifts (CLS &lt; 0.05).</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Inputs -->
-        <div class="tab-pane" id="tab-inputs">
-          <div class="brief-spec-grid">
-            <div class="spec-box">
-              <h4>Input Files Supplied to Evaluator / Model</h4>
-              <ul class="spec-list">
-                <li><code>telemetry_sample.json</code>: Raw unformatted stream data containing timestamps, DO (mg/L), pH values, water temperature (°C), and battery millivolts.</li>
-                <li><code>brand_tokens.css</code>: Hex palette values (#0B0F19, #06B6D4, #10B981, #F43F5E), typographic scale (12px, 14px, 18px, 24px, 32px), border radii tokens.</li>
-                <li><code>status_matrix.pdf</code>: Engineering specification sheet detailing exact warning and critical trigger thresholds for aquaculture organisms.</li>
-              </ul>
-            </div>
-            <div class="spec-box">
-              <h4>Evaluation Stress-Tests Embedded in Inputs</h4>
-              <ul class="spec-list">
-                <li><strong>Missing Data Edge Case:</strong> Intermittent null values in sensor packet #142 to test graceful UI fallback vs. script crash.</li>
-                <li><strong>Out-of-Range Spike:</strong> pH value of 11.2 (extreme anomaly) designed to test threshold indicator styling and alert badges.</li>
-                <li><strong>Narrow Viewport String Lengths:</strong> Long localization labels ("Dissolved Oxygen Saturation Index") to test text truncation and flexbox wrap.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 3: Gold Standard -->
-        <div class="tab-pane" id="tab-gold">
-          <div class="comparison-card gold-standard">
-            <div class="comp-header">
-              <span class="comp-badge pass">Senior Human Reference Deliverable (Shipped Standard)</span>
-              <span style="font-size: 0.8rem; color: #34d399; font-family: monospace;">Craft Score: 10 / 10</span>
-            </div>
-            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
-              Engineered with clean DOM hierarchy, fluid CSS grid, inline SVG circular gauges with dynamic dash-offset animations, complete ARIA labels, and graceful NaN handling.
-            </p>
-            <div style="background: #0f172a; padding: 16px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3); font-family: monospace; font-size: 0.8rem; color: #a7f3d0; overflow-x: auto;">
-              &lt;!-- Production Clean Semantic Component Sample --&gt;<br>
-              &lt;section class="telemetry-widget" aria-label="Aquaculture Sensor Stream" aria-live="polite"&gt;<br>
-              &nbsp;&nbsp;&lt;header class="telemetry-head"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="metric-title"&gt;Zinga Pond Sector-A&lt;/h3&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="status-pill status-nominal"&gt;● Online (12s ago)&lt;/span&gt;<br>
-              &nbsp;&nbsp;&lt;/header&gt;<br>
-              &nbsp;&nbsp;&lt;div class="gauge-grid"&gt;...&lt;!-- Pure SVG gauges with CSS custom property bindings --&gt;&lt;/div&gt;<br>
-              &lt;/section&gt;
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 4: Comparison -->
-        <div class="tab-pane" id="tab-comparison">
-          <div class="comparison-grid">
-            <div class="comparison-card gold-standard">
-              <div class="comp-header">
-                <span class="comp-badge pass">Human Reference Deliverable</span>
-                <span class="score-chip high">98 / 100</span>
-              </div>
-              <ul class="spec-list">
-                <li><strong>Typographic Hierarchy:</strong> Clear contrast between metric title (14px uppercase), reading value (28px tabular mono), and units (12px muted).</li>
-                <li><strong>Mobile Viewport:</strong> Wraps seamlessly into a stacked 1-column card at &lt; 480px with no horizontal scrollbar.</li>
-                <li><strong>Error Handling:</strong> Null sensor packet renders an amber dashed fallback state with a retry tooltip.</li>
-                <li><strong>Craft Detail:</strong> Subtle micro-transitions on value updates with zero layout reflow.</li>
-              </ul>
-            </div>
-
-            <div class="comparison-card ai-failed">
-              <div class="comp-header">
-                <span class="comp-badge fail">Frontier AI Model Output</span>
-                <span class="score-chip low">58 / 100 (Unsatisfactory)</span>
-              </div>
-              <ul class="spec-list">
-                <li><strong>Visual Flaw:</strong> Used absolute positioning on gauge labels causing severe text overlap on viewports under 600px.</li>
-                <li><strong>Hallucination:</strong> Referenced an uninstalled external library (<code>cdn.jsdelivr.net/.../chart.js</code>), violating the zero-external constraint.</li>
-                <li><strong>Accessibility Breach:</strong> Light gray text on dark teal background produced a contrast ratio of 2.4:1 (fails WCAG AA threshold of 4.5:1).</li>
-                <li><strong>Unhandled Exception:</strong> Null sensor packet threw unhandled <code>TypeError: reading 'toFixed' of null</code>, breaking the entire UI rendering.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 5: Rubric & Rationales -->
-        <div class="tab-pane" id="tab-rubric">
-          <table class="rubric-table">
-            <thead>
-              <tr>
-                <th>Evaluation Dimension</th>
-                <th>Evaluation Criteria & Weight</th>
-                <th>Model Score</th>
-                <th>Evaluator Analytical Rationale</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Content & Specification Adherence</strong></td>
-                <td>Zero-external dependencies, constraint obedience, accurate thresholds (30%)</td>
-                <td><span class="score-chip low">4 / 10</span></td>
-                <td>Model injected external CDN script tag, violating the primary negative constraint. Failed null packet edge case.</td>
-              </tr>
-              <tr>
-                <td><strong>Visual Craft & Layout Aesthetics</strong></td>
-                <td>Typographic hierarchy, grid symmetry, spacing rhythm, micro-interactions (25%)</td>
-                <td><span class="score-chip low">6 / 10</span></td>
-                <td>Aesthetic was visually appealing at desktop scale, but failed typographic balance and element margins.</td>
-              </tr>
-              <tr>
-                <td><strong>Responsive Engineering & Robustness</strong></td>
-                <td>320px–1440px fluid reflow, no CLS, DOM semantic validity (25%)</td>
-                <td><span class="score-chip low">5 / 10</span></td>
-                <td>Broken layout on mobile viewports due to rigid pixel containers. Gauge overlapping at narrow breakpoints.</td>
-              </tr>
-              <tr>
-                <td><strong>Accessibility & Production Rigor</strong></td>
-                <td>WCAG AA contrast ratios, ARIA roles, semantic markup (20%)</td>
-                <td><span class="score-chip low">5 / 10</span></td>
-                <td>Failed color contrast ratios (2.4:1 vs required 4.5:1). Entire dashboard rendered in generic un-labelled <code>div</code> tags without ARIA live support.</td>
-              </tr>
-            </tbody>
-          </table>
-          <div style="margin-top: 16px; padding: 12px 16px; background: rgba(99, 102, 241, 0.1); border-left: 3px solid var(--accent-indigo); font-size: 0.85rem; color: #cbd5e1;">
-            <strong>Lead Evaluator Verdict:</strong> Reject AI Output. While superficially plausible, the output exhibits critical failure modes in responsive constraint handling, strict negative-constraint compliance, and runtime error resilience that disqualify it from client shipment.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Filterable Projects Showcase -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Production Portfolio</span>
-        <h2 class="section-title">Selected Engineering & Media Projects</h2>
-        <p class="section-desc">
-          A collection of real-world systems spanning computer vision pipelines, full-stack interactive web products, and automated quality assessment workflows.
-        </p>
-      </div>
-
-      <!-- Filter Controls -->
-      <div class="filter-bar no-print">
-        <button class="filter-btn active" onclick="filterProjects('all')">All Work (8)</button>
-        <button class="filter-btn" onclick="filterProjects('web')">Interactive Web & UI</button>
-        <button class="filter-btn" onclick="filterProjects('cv')">Vision & Media Quality</button>
-        <button class="filter-btn" onclick="filterProjects('eval')">AI & Evaluation</button>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid">
-        
-        <!-- Project 1: RoadMetrics -->
-        <div class="project-card" data-category="cv eval">
-          <div class="project-visual">
-            <div class="visual-pattern-cv">
-              <span class="visual-icon">🛣️</span>
-            </div>
-            <span class="project-badge-float">CV & Ground Truth</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">ML Engineer • RoadMetrics</span>
-            <h3 class="project-title">Real-Time Road & Lane Detection System</h3>
-            <p class="project-desc">
-              Engineered a real-time OpenCV-based road and lane detection pipeline for autonomous driving, achieving 95% object detection accuracy and driving a 40% improvement in production reliability.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Automated annotation workflows to cut manual labeling effort by 70%, establishing strict ground-truth verification standards for edge segmentation and lighting variation.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">OpenCV</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Object Detection</span>
-              <span class="tech-tag">Ground Truth</span>
-              <span class="tech-tag">CI/CD</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: Smart Image Capture -->
-        <div class="project-card" data-category="cv eval">
-          <div class="project-visual">
-            <div class="visual-pattern-cv">
-              <span class="visual-icon">📸</span>
-            </div>
-            <span class="project-badge-float">Media Quality</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">Computer Vision Project</span>
-            <h3 class="project-title">Smart Automated Image Capture & Quality Pipeline</h3>
-            <p class="project-desc">
-              Developed an automated image capture pipeline utilizing algorithmic sharpness detection, adaptive exposure calibration, and noise thresholding, improving overall visual output quality by ~40%.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Implemented objective visual metric scoring (Laplacian blur index, contrast histogram analysis) to filter out degraded or hallucinated image artifacts before ingest.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">OpenCV</span>
-              <span class="tech-tag">Image Processing</span>
-              <span class="tech-tag">Quality Metrics</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PIL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Full-Stack Web Application -->
-        <div class="project-card" data-category="web">
-          <div class="project-visual">
-            <div class="visual-pattern-web">
-              <span class="visual-icon">💻</span>
-            </div>
-            <span class="project-badge-float">Interactive Product</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">AI Engineer • SDS Solutions</span>
-            <h3 class="project-title">Full-Stack Enterprise Web Application & UI</h3>
-            <p class="project-desc">
-              Built a responsive full-stack web application featuring an Angular frontend and a robust Java backend. Containerized and deployed services using Docker for seamless delivery.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Enforced responsive design tokens, component modularity, accessible forms, and smooth state transitions, ensuring consistent rendering across diverse browser viewports.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">Angular</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">REST APIs</span>
-              <span class="tech-tag">Responsive UI</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Table Tennis CV -->
-        <div class="project-card" data-category="cv">
-          <div class="project-visual">
-            <div class="visual-pattern-cv">
-              <span class="visual-icon">🏓</span>
-            </div>
-            <span class="project-badge-float">Video & Motion Analysis</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">AI Engineer • SDS Solutions</span>
-            <h3 class="project-title">Real-Time Sports Motion & Ball Tracking</h3>
-            <p class="project-desc">
-              Built a high-frame-rate computer vision tracking system for table tennis analysis, applying OpenCV-based detection to accurately isolate high-speed ball trajectories and player movement.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Audited temporal video consistency, multi-frame occlusion handling, and motion blur mitigation to maintain trajectory continuity under varying arena lighting conditions.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">OpenCV</span>
-              <span class="tech-tag">Motion Tracking</span>
-              <span class="tech-tag">Temporal Analysis</span>
-              <span class="tech-tag">Python</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: ML Game Success Predictor -->
-        <div class="project-card" data-category="eval web">
-          <div class="project-visual">
-            <div class="visual-pattern-game">
-              <span class="visual-icon">🎮</span>
-            </div>
-            <span class="project-badge-float">Entertainment & Media</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">Machine Learning Project</span>
-            <h3 class="project-title">ML Game Success & Performance Predictor</h3>
-            <p class="project-desc">
-              Built supervised learning models forecasting video game market reception and commercial sales with 85% predictive accuracy, supporting data-driven publishing decisions.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Evaluated multi-dimensional entertainment features (genre alignment, player engagement metrics, platform trends) and designed visual executive summaries for stakeholders.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">Data Modeling</span>
-              <span class="tech-tag">Entertainment Analytics</span>
-              <span class="tech-tag">Python</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Blockchain Flutter UI -->
-        <div class="project-card" data-category="web">
-          <div class="project-visual">
-            <div class="visual-pattern-web">
-              <span class="visual-icon">📱</span>
-            </div>
-            <span class="project-badge-float">Cross-Platform UI</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">Mobile / Web Engineering</span>
-            <h3 class="project-title">Blockchain Credential Verification Platform</h3>
-            <p class="project-desc">
-              Designed and implemented a sleek Flutter-based multi-platform credential verification application, cutting identity verification latency by ~60% through an intuitive verification workflow.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Focused on UI micro-interactions, responsive form ergonomics, instantaneous verification feedback states, and clear typographic hierarchy for security credentials.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Dart</span>
-              <span class="tech-tag">UI/UX</span>
-              <span class="tech-tag">Mobile & Web</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7: IoT Telemetry -->
-        <div class="project-card" data-category="web cv">
-          <div class="project-visual">
-            <div class="visual-pattern-iot">
-              <span class="visual-icon">🌊</span>
-            </div>
-            <span class="project-badge-float">IoT & Telemetry UI</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">IoT & AI Systems • SDS Solutions</span>
-            <h3 class="project-title">Water-Quality Telemetry Pipeline (Zinga Project)</h3>
-            <p class="project-desc">
-              Engineered an ESP32-based aquaculture sensor pipeline and live monitoring interface for fish ponds, streaming real-time DO, pH, and temperature telemetry.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Architected clear status indicator visualizations, real-time telemetry threshold triggers, and reliable data parsing to prevent sensor data loss.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">ESP32</span>
-              <span class="tech-tag">IoT Telemetry</span>
-              <span class="tech-tag">Data Ingestion</span>
-              <span class="tech-tag">Hardware/Software UI</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 8: Big Data & Life Sciences -->
-        <div class="project-card" data-category="eval">
-          <div class="project-visual">
-            <div class="visual-pattern-web">
-              <span class="visual-icon">📊</span>
-            </div>
-            <span class="project-badge-float">Enterprise Reporting</span>
-          </div>
-          <div class="project-body">
-            <span class="project-role-tag">Data Science • Topia & Teachnook</span>
-            <h3 class="project-title">Enterprise Data Modeling & Scientific Insights</h3>
-            <p class="project-desc">
-              Analyzed life-science datasets exceeding 10,000 records (Topia) and exploratory data analysis across &gt;1TB multi-source datasets (Teachnook), improving predictive accuracy by 25%.
-            </p>
-            <div class="eval-highlight-box">
-              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
-              <div class="eval-highlight-desc">
-                Authored structured executive reports and data visualizations translating complex statistical anomalies into clear, actionable scientific decisions.
-              </div>
-            </div>
-            <div class="tech-tags">
-              <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">Statistical Modeling</span>
-              <span class="tech-tag">EDA</span>
-              <span class="tech-tag">Enterprise Decks</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Experience Timeline -->
+  <!-- Experience Section -->
   <section id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Professional History</span>
-        <h2 class="section-title">Work Experience & Industry Roles</h2>
-        <p class="section-desc">
-          Over 2.5 years of intensive applied engineering, model optimization, full-stack web development, and dataset benchmarking.
-        </p>
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-desc">Over 2.5 years of combined AI, ML, computer vision, and engineering experience.</p>
       </div>
 
       <div class="timeline">
@@ -1852,9 +845,9 @@
             </div>
             <ul class="timeline-bullets">
               <li>Built a computer-vision system for real-time table tennis tracking and analysis, applying OpenCV-based detection to capture ball and player movement.</li>
-              <li>Developed an IoT sensor pipeline for aquaculture water-quality monitoring on the Zinga fish project, covering sensor data ingestion and real-time telemetry.</li>
-              <li>Engineered a full-stack web application featuring an Angular frontend and Java backend, researching and validating production-ready technical approaches.</li>
-              <li>Containerized and deployed services using Docker, streamlining the multi-environment deployment workflow.</li>
+              <li>Developed an IoT sensor pipeline for aquaculture water-quality monitoring on the Zinga fish project, covering sensor data ingestion and real-time monitoring.</li>
+              <li>Built a full-stack web application with an Angular frontend and Java backend, and researched and validated approaches for assigned engineering tasks.</li>
+              <li>Containerized and deployed services using Docker, streamlining the deployment workflow.</li>
             </ul>
           </div>
         </div>
@@ -1871,9 +864,8 @@
               <span class="timeline-date">May 2025 – Present</span>
             </div>
             <ul class="timeline-bullets">
-              <li>Engineered a real-time OpenCV-based road and lane detection system for an autonomous driving pipeline, automating annotation workflows to cut manual labeling effort by 70%.</li>
-              <li>Optimized detection models to deliver 95% real-time object detection accuracy, driving a 40% improvement in overall system reliability across production environments.</li>
-              <li>Authored verification protocols to evaluate model inference performance under adverse visual conditions (glare, occlusions, rainfall).</li>
+              <li>Engineered a real-time OpenCV-based road and lane detection system for an autonomous driving pipeline, automating annotation workflows to cut manual labeling effort by 70% and accelerate downstream model training.</li>
+              <li>Optimized detection models to deliver 95% real-time object detection accuracy, driving a 40% improvement in overall system reliability across production.</li>
             </ul>
           </div>
         </div>
@@ -1890,8 +882,8 @@
               <span class="timeline-date">May 2024 – Dec 2024</span>
             </div>
             <ul class="timeline-bullets">
-              <li>Led the design and application of machine learning models to analyze life-science datasets exceeding 10,000 records, surfacing insights that guided research strategy.</li>
-              <li>Owned model validation and tuning end-to-end, improving prediction accuracy by 25% and strengthening confidence in downstream research outcomes.</li>
+              <li>Led the design and application of machine learning models to analyze life-science datasets exceeding 10,000 records, surfacing insights that informed research decisions.</li>
+              <li>Owned model validation and tuning end-to-end, improving prediction accuracy by 25% and strengthening confidence in research outcomes.</li>
             </ul>
           </div>
         </div>
@@ -1908,7 +900,7 @@
               <span class="timeline-date">Apr 2023 – Jun 2023</span>
             </div>
             <ul class="timeline-bullets">
-              <li>Directed exploratory data analysis across datasets exceeding 1TB, identifying key patterns and data quality issues that shaped downstream modeling architecture.</li>
+              <li>Directed exploratory data analysis across datasets exceeding 1TB, identifying key patterns and data quality issues that shaped downstream modeling strategy.</li>
             </ul>
           </div>
         </div>
@@ -1925,116 +917,279 @@
               <span class="timeline-date">Dec 2022 – Jan 2023</span>
             </div>
             <ul class="timeline-bullets">
-              <li>Designed, implemented, and benchmarked 10 machine learning models — including 5+ supervised learning models for classification and regression — establishing a strong foundation in model evaluation.</li>
+              <li>Designed, implemented, and benchmarked 10 machine learning models — including 5+ supervised learning models for classification and regression — building a strong applied ML foundation.</li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Technical & Creative Tooling -->
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Projects Portfolio</h2>
+        <p class="section-desc">Key systems engineered across computer vision, machine learning, IoT, and applications.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">Autonomous Driving</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title">Real-Time CV Road & Lane Detection</h3>
+            <p class="project-desc">
+              Architected a real-time OpenCV/ML road and lane detection system for autonomous driving, achieving 95% accuracy.
+            </p>
+            <ul class="project-bullets">
+              <li>Automated labeling workflows cutting manual annotation effort by 70%.</li>
+              <li>Delivered 95% real-time object detection accuracy for reliable production inference.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Computer Vision</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">Image Processing</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3 class="project-title">Smart Image Capture</h3>
+            <p class="project-desc">
+              Developed an automated OpenCV-based image capture pipeline, improving output quality by ~40%.
+            </p>
+            <ul class="project-bullets">
+              <li>Implemented automated sharpness detection and adaptive exposure calibration.</li>
+              <li>Streamlined image ingestion with artifact and blur filtering.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Image Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">IoT & Embedded</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">IoT Water-Quality Monitoring (Zinga Pond)</h3>
+            <p class="project-desc">
+              Built an ESP32-based IoT system with water sensors for the Zinga fish pond, collecting sensor readings and enabling real-time water-quality monitoring.
+            </p>
+            <ul class="project-bullets">
+              <li>Continuous telemetry ingestion for DO, pH, and water temperature.</li>
+              <li>Real-time sensor pipeline and monitoring telemetry.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">ESP32</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Data Ingestion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">Cross-Platform UI</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Blockchain Certificate Platform</h3>
+            <p class="project-desc">
+              Designed a Flutter-based blockchain credential verification platform, cutting verification time by ~60%.
+            </p>
+            <ul class="project-bullets">
+              <li>Clean, intuitive mobile and web verification workflow.</li>
+              <li>Decentralized verification with cryptographic trust.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Blockchain</span>
+              <span class="tech-tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">Predictive Modeling</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3 class="project-title">ML Game Success Predictor</h3>
+            <p class="project-desc">
+              Built supervised learning models to forecast game sales performance, reaching 85% predictive accuracy to support data-driven publishing decisions.
+            </p>
+            <ul class="project-bullets">
+              <li>Feature engineering on gaming market dynamics and player engagement metrics.</li>
+              <li>85% predictive accuracy across classification and regression benchmarks.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Supervised Learning</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Table Tennis Tracking -->
+        <div class="project-card">
+          <div class="project-body">
+            <div class="project-head-row">
+              <span style="font-size: 0.78rem; font-weight: 600; color: var(--accent-indigo); text-transform: uppercase;">Vision Pipeline</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">Table Tennis Computer Vision Tracking</h3>
+            <p class="project-desc">
+              Computer-vision system built at SDS Solutions for real-time table tennis tracking and analysis, applying OpenCV-based detection to capture ball and player movement.
+            </p>
+            <ul class="project-bullets">
+              <li>High-frame-rate ball trajectory capture and motion analysis.</li>
+              <li>Temporal consistency and occlusion handling under arena lighting.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Motion Tracking</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Capabilities</span>
-        <h2 class="section-title">Technical & Creative Tooling</h2>
-        <p class="section-desc">
-          Proficient in production frameworks, visual media libraries, and AI evaluation toolkits.
-        </p>
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-desc">Technologies, frameworks, and tools used across production and research.</p>
       </div>
 
-      <div class="skills-category-grid">
-        <div class="skill-category-card">
-          <h3 class="skill-cat-title">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            Visual Media & Vision
-          </h3>
-          <div class="pill-cloud">
-            <span class="pill-item">OpenCV</span>
-            <span class="pill-item">Image Processing</span>
-            <span class="pill-item">Video Stream Analysis</span>
-            <span class="pill-item">Matplotlib</span>
-            <span class="pill-item">PIL / Pillow</span>
-            <span class="pill-item">Figma Design Workflows</span>
-            <span class="pill-item">Canva</span>
-            <span class="pill-item">Visual Artifact Auditing</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <h3 class="skill-cat-title">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            Interactive Web & UI
-          </h3>
-          <div class="pill-cloud">
-            <span class="pill-item">Angular</span>
-            <span class="pill-item">HTML5 & Semantic DOM</span>
-            <span class="pill-item">CSS3 / Flexbox / Grid</span>
-            <span class="pill-item">JavaScript (ES6+)</span>
-            <span class="pill-item">Flutter UI</span>
-            <span class="pill-item">Responsive Design</span>
-            <span class="pill-item">REST API Design</span>
-            <span class="pill-item">WCAG AA Accessibility</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <h3 class="skill-cat-title">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-            AI Evaluation & Benchmarking
-          </h3>
-          <div class="pill-cloud">
-            <span class="pill-item">Ground Truth Curation</span>
-            <span class="pill-item">Brief Authoring</span>
-            <span class="pill-item">Rubric Engineering</span>
-            <span class="pill-item">Side-by-Side Grading</span>
-            <span class="pill-item">Error Taxonomy</span>
-            <span class="pill-item">Automated Annotation</span>
-            <span class="pill-item">Hallucination Detection</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <h3 class="skill-cat-title">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-            Backend & Engineering
-          </h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 class="skill-card-title">Languages & Data</h3>
           <div class="pill-cloud">
             <span class="pill-item">Python</span>
-            <span class="pill-item">FastAPI / Flask / Django</span>
+            <span class="pill-item">C++</span>
+            <span class="pill-item">C</span>
+            <span class="pill-item">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">ML / DL / CV</h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Scikit-learn</span>
+            <span class="pill-item">TensorFlow</span>
+            <span class="pill-item">PyTorch</span>
+            <span class="pill-item">Keras</span>
+            <span class="pill-item">OpenCV</span>
+            <span class="pill-item">Matplotlib</span>
+            <span class="pill-item">Deep Learning</span>
+            <span class="pill-item">NLP</span>
+            <span class="pill-item">Supervised Learning</span>
+            <span class="pill-item">Real-time Object/Lane Detection</span>
+            <span class="pill-item">Model Optimization</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Deployment & Backend</h3>
+          <div class="pill-cloud">
+            <span class="pill-item">FastAPI</span>
+            <span class="pill-item">Flask</span>
+            <span class="pill-item">Django</span>
+            <span class="pill-item">Asyncio</span>
+            <span class="pill-item">REST API design</span>
+            <span class="pill-item">Angular</span>
             <span class="pill-item">Java</span>
-            <span class="pill-item">Docker Containerization</span>
-            <span class="pill-item">Git / GitHub CI/CD</span>
-            <span class="pill-item">SQL & DBMS</span>
-            <span class="pill-item">C++ / C</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">MLOps & Cloud</h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Docker</span>
+            <span class="pill-item">CI/CD</span>
+            <span class="pill-item">MLflow</span>
+            <span class="pill-item">Model Deployment</span>
+            <span class="pill-item">Model Monitoring</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Tools</h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Jupyter</span>
+            <span class="pill-item">Google Colab</span>
+            <span class="pill-item">Hugging Face</span>
+            <span class="pill-item">VS Code</span>
+            <span class="pill-item">Git / GitHub</span>
             <span class="pill-item">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Coursework</h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Computer Vision</span>
+            <span class="pill-item">Image Processing</span>
+            <span class="pill-item">Machine Learning</span>
+            <span class="pill-item">Artificial Intelligence</span>
+            <span class="pill-item">Data Structures</span>
+            <span class="pill-item">DBMS</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mercor Submission Quick Action Callout -->
-  <section class="no-print">
+  <!-- Education & Certifications -->
+  <section id="education">
     <div class="container">
-      <div class="submission-callout">
-        <h2 class="submission-title">Ready for Mercor Portfolio Submission</h2>
-        <p class="submission-text">
-          This portfolio is structured specifically for Mercor’s <strong>Creative & Media Expert</strong> role. You can submit either via the public GitHub link or export a print-optimized PDF file.
-        </p>
+      <div class="section-header">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Education & Certifications</h2>
+      </div>
 
-        <div class="submission-actions">
-          <button class="btn btn-primary" onclick="copyPortfolioLink()">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-            <span>Copy Public URL for Field 2 (dhruvdesai263.github.io)</span>
-          </button>
-          
-          <button class="btn btn-secondary" onclick="window.print()">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            <span>Save Clean PDF for Field 1 (Upload File)</span>
-          </button>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 6px;">Charusat University</h3>
+          <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 8px;">Bachelor of Technology (B.Tech) in Computer Engineering</p>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 4px;">Changa, Anand, India</p>
+          <span style="font-size: 0.82rem; font-family: monospace; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px;">Sept 2022 – May 2025</span>
+        </div>
+
+        <div class="edu-card">
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 12px;">Certifications</h3>
+          <ul class="project-bullets" style="font-size: 0.9rem; color: #cbd5e1;">
+            <li><strong>Data Science and Data Analyst</strong> — Teachnook (2023)</li>
+            <li><strong>Machine Learning</strong> — Rinex (2022)</li>
+            <li><strong>Introduction to IT and Cybersecurity</strong> — Cybrary (2022)</li>
+            <li><strong>Python</strong> — Udemy (2021)</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2043,52 +1198,20 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>Dhruv Desai • Portfolio & AI Evaluation Dossier • Charusat University (2025)</p>
-      <p style="margin-top: 6px; font-size: 0.78rem;">
-        Contact: <a href="mailto:DhruvDesai3263@gmail.com" style="color: var(--accent-cyan);">DhruvDesai3263@gmail.com</a> | +91 9510312885 | Surat, Gujarat, India
+      <p style="font-size: 1rem; color: #fff; font-weight: 600; margin-bottom: 6px;">Dhruv Desai</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        <a href="mailto:DhruvDesai3263@gmail.com" style="color: var(--accent-cyan);">DhruvDesai3263@gmail.com</a> • +91 9510312885 • Surat, Gujarat, India
+      </p>
+      <p style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">
+        Portfolio: <a href="https://dhruvdesai263.github.io/" target="_blank" style="color: #94a3b8;">dhruvdesai263.github.io</a> • GitHub: <a href="https://github.com/DhruvDesai263" target="_blank" style="color: #94a3b8;">github.com/DhruvDesai263</a>
       </p>
     </div>
   </footer>
 
-  <!-- Toast Notification -->
+  <!-- Toast -->
   <div class="toast" id="toast">Portfolio link copied to clipboard!</div>
 
-  <!-- JavaScript -->
   <script>
-    // Tab switching for Case Study
-    function switchTab(evt, tabId) {
-      const tabPanes = document.querySelectorAll('.tab-pane');
-      tabPanes.forEach(pane => pane.classList.remove('active'));
-
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      tabBtns.forEach(btn => btn.classList.remove('active'));
-
-      document.getElementById(tabId).classList.add('active');
-      evt.currentTarget.classList.add('active');
-    }
-
-    // Filter projects
-    function filterProjects(category) {
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      filterBtns.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      const cards = document.querySelectorAll('.project-card');
-      cards.forEach(card => {
-        if (category === 'all') {
-          card.style.display = 'flex';
-        } else {
-          const cats = card.getAttribute('data-category') || '';
-          if (cats.includes(category)) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        }
-      });
-    }
-
-    // Copy live portfolio URL
     function copyPortfolioLink() {
       const url = "https://dhruvdesai263.github.io/";
       if (navigator.clipboard) {
