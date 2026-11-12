@@ -1,715 +1,2119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv Desai - ML & Computer Vision Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #3b82f6;
-            --accent-glow: rgba(59, 130, 246, 0.2);
-            --text: #e2e8f0;
-            --text-muted: #94a3b8;
-            --surface: #1e293b;
-            --surface-light: #334155;
-            --success: #10b981;
-            --grid: rgba(148, 163, 184, 0.05);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruv Desai | Creative Technologist, Interactive Product Engineer & AI Evaluation Specialist</title>
+  <meta name="description" content="Portfolio of Dhruv Desai - Interactive Digital Products, Computer Vision, Visual Media Quality, and Frontier AI Evaluation & Benchmark Authoring.">
+  <meta name="author" content="Dhruv Desai">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --bg-primary: #0a0e17;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --bg-card-hover: rgba(31, 41, 55, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(99, 102, 241, 0.4);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --accent-indigo: #6366f1;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --gradient-brand: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #10b981 100%);
+      --gradient-dark: linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 14, 23, 0.95) 100%);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
 
-        body {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--primary);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Animated grid background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(var(--grid) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: 0;
-            animation: gridMove 20s linear infinite;
-        }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 65%, rgba(6, 182, 212, 0.10) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
 
-        /* Floating gradient orbs */
-        .orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            pointer-events: none;
-            z-index: 0;
-        }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: var(--accent);
-            top: -200px;
-            right: -200px;
-            animation: float 15s ease-in-out infinite;
-        }
+    /* Top Banner / Mercor Bar */
+    .top-banner {
+      background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
+      border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
 
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: var(--success);
-            bottom: -150px;
-            left: -150px;
-            animation: float 12s ease-in-out infinite reverse;
-        }
+    .badge-pill {
+      background: rgba(99, 102, 241, 0.3);
+      border: 1px solid var(--accent-indigo);
+      color: #c7d2fe;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(50px, 50px) scale(1.1); }
-        }
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 14, 23, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
 
-        /* Header */
-        header {
-            padding: 3rem 0 6rem;
-            animation: slideDown 0.8s ease-out;
-        }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
 
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            animation: fadeIn 1s ease-out 0.3s backwards;
-        }
+    .nav-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
 
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--success);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
+    .nav-role {
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+      display: block;
+      line-height: 1.1;
+    }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
 
-        h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeIn 1s ease-out 0.5s backwards;
-        }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        .tagline {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            animation: fadeIn 1s ease-out 0.7s backwards;
-        }
+    .nav-links a:hover {
+      color: #fff;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            animation: fadeIn 1s ease-out 0.9s backwards;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
 
-        .link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--surface);
-            border: 1px solid var(--surface-light);
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-indigo), #4f46e5);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+    }
 
-        .link-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, var(--accent-glow), transparent);
-            transition: left 0.5s ease;
-        }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+    }
 
-        .link-btn:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px var(--accent-glow);
-        }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
 
-        .link-btn:hover::before {
-            left: 100%;
-        }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
 
-        .link-btn.primary {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
+    .btn-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+    }
 
-        /* Metrics */
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 4rem 0;
-        }
+    .btn-emerald:hover {
+      background: rgba(16, 185, 129, 0.25);
+    }
 
-        .metric-card {
-            background: var(--surface);
-            border: 1px solid var(--surface-light);
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            animation: slideUp 0.8s ease-out backwards;
-            transition: all 0.3s ease;
-        }
+    /* Hero Section */
+    .hero {
+      padding: 70px 0 50px;
+      position: relative;
+    }
 
-        .metric-card:nth-child(1) { animation-delay: 0.2s; }
-        .metric-card:nth-child(2) { animation-delay: 0.3s; }
-        .metric-card:nth-child(3) { animation-delay: 0.4s; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      align-items: center;
+    }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .hero-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
 
-        .metric-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--success));
-            transform: scaleX(0);
-            transition: transform 0.5s ease;
-            transform-origin: left;
-        }
+    .hero-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-        .metric-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-        }
+    .hero-tag.live-indicator::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
 
-        .metric-card:hover::before {
-            transform: scaleX(1);
-        }
+    .hero-title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
 
-        .metric-value {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
+    .gradient-text {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .metric-label {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+    .hero-lead {
+      font-size: 1.12rem;
+      color: #cbd5e1;
+      margin-bottom: 28px;
+      max-width: 620px;
+      line-height: 1.7;
+    }
 
-        /* Projects */
-        .section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-color);
+    }
 
-        .projects {
-            display: grid;
-            gap: 2rem;
-            margin-bottom: 6rem;
-        }
+    .metric-card {
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      text-align: left;
+    }
 
-        .project-card {
-            background: var(--surface);
-            border: 1px solid var(--surface-light);
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-            transition: all 0.3s ease;
-            animation: slideUp 0.8s ease-out backwards;
-        }
+    .metric-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+      line-height: 1.1;
+      font-family: monospace;
+    }
 
-        .project-card:nth-child(1) { animation-delay: 0.3s; }
-        .project-card:nth-child(2) { animation-delay: 0.4s; }
-        .project-card:nth-child(3) { animation-delay: 0.5s; }
-        .project-card:nth-child(4) { animation-delay: 0.6s; }
+    .metric-value.indigo { color: #818cf8; }
+    .metric-value.cyan { color: #22d3ee; }
+    .metric-value.emerald { color: #34d399; }
+    .metric-value.amber { color: #fbbf24; }
 
-        .project-card:hover {
-            border-color: var(--accent);
-            transform: translateX(10px);
-        }
+    .metric-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.3;
+    }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            gap: 1rem;
-        }
+    /* Hero Card / Profile Card */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
 
-        .project-title {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.25rem;
-        }
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-brand);
+    }
 
-        .project-year {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            white-space: nowrap;
-        }
+    .card-header-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-cyan);
+      margin-bottom: 10px;
+    }
 
-        .project-description {
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
+    .profile-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
 
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+    .profile-info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
 
-        .tag {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-            border-radius: 4px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
+    .profile-info-item strong {
+      color: var(--text-main);
+      min-width: 90px;
+      font-size: 0.85rem;
+    }
 
-        /* Experience */
-        .experience {
-            margin-bottom: 6rem;
-        }
+    .profile-info-item a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
 
-        .exp-item {
-            background: var(--surface);
-            border: 1px solid var(--surface-light);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            transition: all 0.3s ease;
-            animation: slideUp 0.8s ease-out backwards;
-        }
+    .profile-info-item a:hover {
+      text-decoration: underline;
+    }
 
-        .exp-item:nth-child(1) { animation-delay: 0.2s; }
-        .exp-item:nth-child(2) { animation-delay: 0.3s; }
-        .exp-item:nth-child(3) { animation-delay: 0.4s; }
-        .exp-item:nth-child(4) { animation-delay: 0.5s; }
+    /* Section Styling */
+    section {
+      padding: 60px 0;
+      position: relative;
+    }
 
-        .exp-item:hover {
-            border-color: var(--accent);
-            transform: translateX(10px);
-        }
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 46px;
+    }
 
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-indigo);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
 
-        .exp-role {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text);
-        }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
 
-        .exp-company {
-            color: var(--accent);
-            font-weight: 600;
-        }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
 
-        .exp-date {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
+    /* 5 Competency Pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
 
-        .exp-description {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
 
-        /* Footer */
-        footer {
-            padding: 4rem 0;
-            text-align: center;
-            border-top: 1px solid var(--surface-light);
-            margin-top: 6rem;
-        }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-highlight);
+      background: var(--bg-card-hover);
+    }
 
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
+    .pillar-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: monospace;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      display: block;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
+    .pillar-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
 
-            header {
-                padding: 2rem 0 4rem;
-            }
+    .pillar-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
 
-            .metrics {
-                grid-template-columns: 1fr;
-            }
+    .pillar-skills {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
-            .project-header {
-                flex-direction: column;
-            }
+    .skill-micro {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #94a3b8;
+    }
 
-            .exp-header {
-                flex-direction: column;
-            }
-        }
+    /* Featured Case Study: AI Benchmark Interactive Sandbox */
+    .benchmark-container {
+      background: var(--gradient-dark);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+      margin-bottom: 50px;
+    }
 
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            animation: bounce 2s ease-in-out infinite;
-            z-index: 10;
-        }
+    .benchmark-badge-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-        }
+    .benchmark-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
 
-        .scroll-indicator::after {
-            content: '↓';
-            display: block;
-            text-align: center;
-            margin-top: 0.5rem;
-            font-size: 1rem;
-        }
-    </style>
+    .tab-btn {
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: var(--accent-indigo);
+      border-color: var(--accent-indigo);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .tab-pane {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brief-spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .spec-box {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+    }
+
+    .spec-box h4 {
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spec-list {
+      list-style: none;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .spec-list li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .spec-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent-indigo);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .comparison-card {
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-color);
+    }
+
+    .comparison-card.gold-standard {
+      border-color: rgba(16, 185, 129, 0.5);
+      background: rgba(6, 78, 59, 0.15);
+    }
+
+    .comparison-card.ai-failed {
+      border-color: rgba(244, 63, 94, 0.4);
+      background: rgba(136, 19, 55, 0.15);
+    }
+
+    .comp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .comp-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .comp-badge.pass { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid var(--accent-emerald); }
+    .comp-badge.fail { background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid var(--accent-rose); }
+
+    .rubric-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 14px;
+    }
+
+    .rubric-table th, .rubric-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .rubric-table th {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .score-chip {
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .score-chip.high { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .score-chip.low { background: rgba(244, 63, 94, 0.2); color: #fb7185; }
+
+    /* Filter Controls */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .filter-btn.active {
+      background: var(--text-main);
+      color: #0a0e17;
+      font-weight: 600;
+      border-color: #fff;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-highlight);
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-visual {
+      height: 180px;
+      background: #1e293b;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .visual-pattern-cv {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-pattern-web {
+      background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-pattern-game {
+      background: linear-gradient(135deg, #4c1d95 0%, #0f172a 100%);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-pattern-iot {
+      background: linear-gradient(135deg, #083344 0%, #0f172a 100%);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-icon {
+      font-size: 2.8rem;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    }
+
+    .project-badge-float {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-role-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-indigo);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .project-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .eval-highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 3px solid var(--accent-indigo);
+      padding: 10px 14px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 18px;
+    }
+
+    .eval-highlight-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 3px;
+    }
+
+    .eval-highlight-desc {
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      line-height: 1.45;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .tech-tag {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 3px 9px;
+      border-radius: 4px;
+      color: #94a3b8;
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 21px;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-indigo);
+      box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+    }
+
+    .timeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .timeline-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .timeline-company {
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 10px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .timeline-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent-indigo);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* Skills Grid */
+    .skills-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .skill-cat-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-cat-title svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-cyan);
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill-item {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      transition: all 0.2s;
+    }
+
+    .pill-item:hover {
+      border-color: var(--accent-indigo);
+      background: rgba(99, 102, 241, 0.1);
+      color: #fff;
+    }
+
+    /* Footer / CTA Card */
+    .submission-callout {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15));
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      text-align: center;
+      margin: 40px 0 70px;
+      position: relative;
+    }
+
+    .submission-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .submission-text {
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+    }
+
+    .submission-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 2.2rem; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .brief-spec-grid { grid-template-columns: 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.85rem; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .submission-callout { padding: 24px; }
+    }
+
+    /* Print Stylesheet for Option 1 PDF Generation */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        background-image: none !important;
+      }
+      .top-banner, .navbar, .filter-bar, .hero-cta, .submission-actions, .toast, .no-print {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .hero {
+        padding: 10px 0 20px !important;
+      }
+      .hero-title {
+        color: #111827 !important;
+        font-size: 2rem !important;
+      }
+      .gradient-text {
+        -webkit-text-fill-color: #111827 !important;
+        color: #111827 !important;
+      }
+      .profile-card, .metric-card, .pillar-card, .benchmark-container, .project-card, .timeline-card, .skill-category-card {
+        background: #fff !important;
+        border: 1px solid #d1d5db !important;
+        color: #111827 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+      .project-title, .timeline-title, .pillar-title {
+        color: #111827 !important;
+      }
+      .project-desc, .hero-lead, .timeline-bullets {
+        color: #374151 !important;
+      }
+      .tech-tag, .skill-micro, .pill-item {
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+      }
+      .eval-highlight-box {
+        background: #f1f5f9 !important;
+        border-left: 3px solid #4f46e5 !important;
+      }
+      .eval-highlight-desc {
+        color: #1e293b !important;
+      }
+      .rubric-table th {
+        background: #f1f5f9 !important;
+        color: #1e293b !important;
+      }
+      .rubric-table td {
+        color: #1e293b !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #111827 !important;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
 
+  <!-- Top Mercor Banner -->
+  <div class="top-banner">
+    <span class="badge-pill">Mercor Candidate Portfolio</span>
+    <span>Target Role: <strong>Creative & Media Expert</strong> ($80–$90/hr) • Benchmark Authoring & AI Evaluation</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
     <div class="container">
-        <header>
-            <div class="status">
-                <span class="status-dot"></span>
-                Available for opportunities
-            </div>
-            <h1>Dhruv Desai</h1>
-            <p class="tagline">Building ML and computer vision systems that solve real problems</p>
-            <div class="links">
-                <a href="https://github.com/DhruvDesai263" class="link-btn primary" target="_blank">
-                    <span>→</span> GitHub
-                </a>
-                <a href="https://linkedin.com/in/dhruv-desai-895534209" class="link-btn" target="_blank">
-                    <span>→</span> LinkedIn
-                </a>
-                <a href="https://kaggle.com/dhruvdesai263" class="link-btn" target="_blank">
-                    <span>→</span> Kaggle
-                </a>
-                <a href="mailto:DhruvDesai3263@gmail.com" class="link-btn" target="_blank">
-                    <span>→</span> Email
-                </a>
-            </div>
-        </header>
+      <div class="nav-inner">
+        <a href="#overview" class="nav-brand">
+          <div class="nav-avatar">DD</div>
+          <div>
+            <div class="nav-title">Dhruv Desai</div>
+            <span class="nav-role">Interactive Products & AI Evaluation</span>
+          </div>
+        </a>
 
-        <section class="metrics">
-            <div class="metric-card">
-                <span class="metric-value">95%</span>
-                <span class="metric-label">Detection Accuracy</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">70%</span>
-                <span class="metric-label">Time Reduction</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">15+</span>
-                <span class="metric-label">Projects Delivered</span>
-            </div>
-        </section>
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#competencies">Evaluation Pillars</a></li>
+          <li><a href="#case-study">AI Benchmark Task</a></li>
+          <li><a href="#projects">Work & Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Tooling</a></li>
+        </ul>
 
-        <section>
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div>
-                            <h3 class="project-title">CV Road & Lane Detection</h3>
-                            <p class="project-year">2025</p>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Real-time detection system using OpenCV and ML achieving 95% accuracy. Reduced manual annotation time by 70% for autonomous driving applications.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">ML</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div>
-                            <h3 class="project-title">Blockchain Certificate Platform</h3>
-                            <p class="project-year">2024</p>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Enhanced Flutter-based certificate verification system with 60% faster verification and 90% fraud reduction using blockchain technology.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Blockchain</span>
-                        <span class="tag">Flutter</span>
-                        <span class="tag">Smart Contracts</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div>
-                            <h3 class="project-title">AR-VR Educational Game</h3>
-                            <p class="project-year">2022</p>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Immersive educational game built with Unity and C# featuring custom 3D assets created in Blender for enhanced learning experiences.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Blender</span>
-                        <span class="tag">AR/VR</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div>
-                            <h3 class="project-title">ML Game Success Predictor</h3>
-                            <p class="project-year">2022</p>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Supervised learning models achieving 85% accuracy in predicting game sales success based on market trends and player preferences.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">Data Analysis</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience">
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="exp-item">
-                <div class="exp-header">
-                    <div>
-                        <p class="exp-role">Machine Learning Intern at <span class="exp-company">RoadMetrics</span></p>
-                    </div>
-                    <p class="exp-date">Jan 2025 – May 2025</p>
-                </div>
-                <p class="exp-description">
-                    Pioneered an OpenCV-based road/lane detection prototype, reducing manual annotation time by 70% and accelerating ML training for self-driving systems. Achieved 95% accuracy in real-time object detection, improving system reliability by 40%.
-                </p>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <div>
-                        <p class="exp-role">Data Science Intern at <span class="exp-company">Topia Life Science</span></p>
-                    </div>
-                    <p class="exp-date">May 2024 – Dec 2024</p>
-                </div>
-                <p class="exp-description">
-                    Applied machine learning techniques to analyze complex life science datasets containing 10,000+ records. Conducted comprehensive data analysis and model validation, improving prediction accuracy by 25%.
-                </p>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <div>
-                        <p class="exp-role">Data Science Intern at <span class="exp-company">Teachnook</span></p>
-                    </div>
-                    <p class="exp-date">April 2023 – June 2023</p>
-                </div>
-                <p class="exp-description">
-                    Performed exploratory data analysis on datasets exceeding 1TB, extracting actionable insights and building data pipelines for large-scale processing.
-                </p>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <div>
-                        <p class="exp-role">Machine Learning Intern at <span class="exp-company">Rinex</span></p>
-                    </div>
-                    <p class="exp-date">Dec 2022 – Jan 2023</p>
-                </div>
-                <p class="exp-description">
-                    Implemented 5+ supervised learning models for classification and regression tasks, gaining foundational experience in ML model development and deployment.
-                </p>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2025 Dhruv Desai. Built with passion for ML & Computer Vision.</p>
-        </footer>
+        <div class="nav-actions">
+          <button class="btn btn-secondary no-print" onclick="copyPortfolioLink()" title="Copy live URL for Mercor Field 2">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span>Copy Link</span>
+          </button>
+          <button class="btn btn-primary no-print" onclick="window.print()" title="Print / Save PDF for Mercor Field 1">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Save as PDF</span>
+          </button>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div class="scroll-indicator">Scroll</div>
+  <!-- Hero Section -->
+  <section class="hero" id="overview">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-meta">
+            <span class="hero-tag live-indicator">Open for Mercor Hourly Engagement</span>
+            <span class="hero-tag">Computer Engineering Graduate (2025)</span>
+            <span class="hero-tag">Surat, Gujarat, India</span>
+          </div>
 
-    <script>
-        // Hide scroll indicator after scrolling
-        window.addEventListener('scroll', () => {
-            const indicator = document.querySelector('.scroll-indicator');
-            if (window.scrollY > 100) {
-                indicator.style.opacity = '0';
-            } else {
-                indicator.style.opacity = '1';
-            }
+          <h1 class="hero-title">
+            Crafting & Evaluating <span class="gradient-text">Interactive Digital Products</span> & Visual Media at Scale.
+          </h1>
+
+          <p class="hero-lead">
+            Experienced technologist blending <strong>full-stack web architecture (Angular/Java)</strong>, <strong>high-fidelity computer vision pipelines (OpenCV)</strong>, and <strong>rigorous AI evaluation methodologies</strong>. Proven track record establishing ground-truth datasets, authoring evaluation rubrics, and judging generative model outputs across content precision and technical craft.
+          </p>
+
+          <div class="hero-cta no-print">
+            <a href="#case-study" class="btn btn-primary">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Explore AI Benchmark Case Study</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <span>View Production Portfolio</span>
+            </a>
+            <a href="https://github.com/DhruvDesai263" target="_blank" rel="noopener" class="btn btn-emerald">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub @DhruvDesai263</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Quick Card -->
+        <div class="profile-card">
+          <span class="card-header-badge">Candidate Verification File</span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Dhruv Desai</h3>
+          <p style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 500;">B.Tech Computer Engineering (2025)</p>
+          
+          <ul class="profile-info-list">
+            <li class="profile-info-item">
+              <strong>Role Focus:</strong>
+              <span>Creative & Media Expert ($80–$90/hr)</span>
+            </li>
+            <li class="profile-info-item">
+              <strong>Email:</strong>
+              <a href="mailto:DhruvDesai3263@gmail.com">DhruvDesai3263@gmail.com</a>
+            </li>
+            <li class="profile-info-item">
+              <strong>Phone:</strong>
+              <span>+91 9510312885</span>
+            </li>
+            <li class="profile-info-item">
+              <strong>GitHub:</strong>
+              <a href="https://github.com/DhruvDesai263" target="_blank" rel="noopener">github.com/DhruvDesai263</a>
+            </li>
+            <li class="profile-info-item">
+              <strong>Portfolio Link:</strong>
+              <a href="https://dhruvdesai263.github.io/" target="_blank" rel="noopener">dhruvdesai263.github.io</a>
+            </li>
+            <li class="profile-info-item">
+              <strong>Location:</strong>
+              <span>Surat, Gujarat, India (Remote Ready)</span>
+            </li>
+          </ul>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: var(--radius-sm); padding: 12px; font-size: 0.8rem; color: var(--text-muted);">
+            <strong style="color:#fff;">Mercor Submission Note:</strong> Use this page directly for <em>Option 2 (Public Link)</em>, or click <em>"Save as PDF"</em> above to generate the file for <em>Option 1 (Upload)</em>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-value indigo">95%</span>
+          <div class="metric-label">Object & Lane Detection Accuracy in Real-Time Vision Pipelines</div>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value cyan">70%</span>
+          <div class="metric-label">Reduction in Manual Annotation Effort via Ground-Truth Automation</div>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value emerald">~40%</span>
+          <div class="metric-label">Uplift in Visual Media Quality via Automated Image Capture Pipeline</div>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value amber">&gt;1 TB</span>
+          <div class="metric-label">Data Analysis & Multi-Modal Dataset Engineering for Enterprise Insights</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competency Pillars Aligned with Mercor -->
+  <section id="competencies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Role Alignment</span>
+        <h2 class="section-title">Evaluation Expertise Across the 5 Mercor Areas</h2>
+        <p class="section-desc">
+          Frontier AI evaluation requires both high-end technical proficiency and deep creative discernment. Here is how my production experience maps to Mercor’s core evaluation scope.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Area 1 -->
+        <div class="pillar-card">
+          <span class="pillar-num">AREA 01</span>
+          <h3 class="pillar-title">Interactive Digital Products</h3>
+          <p class="pillar-desc">
+            Evaluating web applications, responsive layouts, DOM tree semantics, state management, and HTML-based interactive experiences against production engineering standards.
+          </p>
+          <div class="pillar-skills">
+            <span class="skill-micro">Angular</span>
+            <span class="skill-micro">HTML5 / CSS3</span>
+            <span class="skill-micro">Responsive Grid</span>
+            <span class="skill-micro">DOM Semantics</span>
+            <span class="skill-micro">Flutter UI</span>
+          </div>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="pillar-card">
+          <span class="pillar-num">AREA 02</span>
+          <h3 class="pillar-title">Visual Media & Image Quality</h3>
+          <p class="pillar-desc">
+            Computer vision-driven inspection of visual artifacts, edge sharpness, noise levels, color space consistency, and temporal consistency in video frames.
+          </p>
+          <div class="pillar-skills">
+            <span class="skill-micro">OpenCV</span>
+            <span class="skill-micro">Image Processing</span>
+            <span class="skill-micro">Video Analysis</span>
+            <span class="skill-micro">Blur Detection</span>
+            <span class="skill-micro">Artifact Auditing</span>
+          </div>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="pillar-card">
+          <span class="pillar-num">AREA 03</span>
+          <h3 class="pillar-title">AI Benchmark Authoring</h3>
+          <p class="pillar-desc">
+            Drafting realistic client creative briefs, compiling messy raw input assets, authoring gold-standard reference deliverables, and designing scoring rubrics.
+          </p>
+          <div class="pillar-skills">
+            <span class="skill-micro">Brief Writing</span>
+            <span class="skill-micro">Ground Truth Curation</span>
+            <span class="skill-micro">Rubric Design</span>
+            <span class="skill-micro">Constraint Testing</span>
+          </div>
+        </div>
+
+        <!-- Area 4 -->
+        <div class="pillar-card">
+          <span class="pillar-num">AREA 04</span>
+          <h3 class="pillar-title">Side-by-Side Craft Critique</h3>
+          <p class="pillar-desc">
+            Articulating why one deliverable outperforms another across typographic hierarchy, spatial rhythm, cognitive load, negative space, and brand voice fidelity.
+          </p>
+          <div class="pillar-skills">
+            <span class="skill-micro">Typographic Rhythm</span>
+            <span class="skill-micro">Layout Hierarchy</span>
+            <span class="skill-micro">Color Contrast</span>
+            <span class="skill-micro">Written Rationales</span>
+          </div>
+        </div>
+
+        <!-- Area 5 -->
+        <div class="pillar-card">
+          <span class="pillar-num">AREA 05</span>
+          <h3 class="pillar-title">Enterprise Communication</h3>
+          <p class="pillar-desc">
+            Distilling complex datasets (>10,000 biological records, >1TB datasets) into executive summaries, clear technical documentation, and structured evaluation reports.
+          </p>
+          <div class="pillar-skills">
+            <span class="skill-micro">Data Storytelling</span>
+            <span class="skill-micro">Technical Decks</span>
+            <span class="skill-micro">Model Reporting</span>
+            <span class="skill-micro">Executive Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Benchmark Task Case Study -->
+  <section id="case-study" style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Evaluation Artifact</span>
+        <h2 class="section-title">Sample Benchmark Task: Interactive Product & Visual UI</h2>
+        <p class="section-desc">
+          An end-to-end demonstration of the exact deliverables required by Mercor: a realistic client brief, input asset package, reference standard, side-by-side AI critique, and scoring rubric.
+        </p>
+      </div>
+
+      <div class="benchmark-container">
+        <div class="benchmark-badge-bar">
+          <div>
+            <span class="badge-pill" style="margin-right: 8px;">Evaluation Task ID: AGY-EVAL-2026-04</span>
+            <strong style="color: #fff; font-size: 0.95rem;">Interactive Telemetry Dashboard & Responsive Web Component</strong>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--accent-cyan); font-family: monospace;">Calibrated Standard: Senior Lead Frontend & Media Quality</span>
+        </div>
+
+        <!-- Interactive Tabs -->
+        <div class="benchmark-tabs">
+          <button class="tab-btn active" onclick="switchTab(event, 'tab-brief')">1. The Creative Brief</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-inputs')">2. Input Asset Manifest</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-gold')">3. Gold-Standard Reference</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-comparison')">4. AI Output vs. Human Reference</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-rubric')">5. Evaluation Rubric & Rationales</button>
+        </div>
+
+        <!-- Tab 1: Brief -->
+        <div class="tab-pane active" id="tab-brief">
+          <div class="brief-spec-grid">
+            <div class="spec-box">
+              <h4>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Task Objective & Context
+              </h4>
+              <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
+                <strong>Client Scenario:</strong> A marine tech startup deploying autonomous aquaculture telemetry sensors needs a high-performance, responsive live monitoring widget to be embedded in their executive web portal.
+              </p>
+              <ul class="spec-list">
+                <li><strong>Target Audience:</strong> Operations Directors and Field Biologists monitoring water parameters across multiple remote sites.</li>
+                <li><strong>Single End Deliverable:</strong> A production-ready, accessible, standalone HTML/CSS/JS interactive dashboard widget.</li>
+                <li><strong>Key Functionality:</strong> Real-time gauge visualization (DO, pH, Temp), status threshold alerts (Normal / Warning / Critical), and responsive reflow down to 320px viewport.</li>
+              </ul>
+            </div>
+
+            <div class="spec-box">
+              <h4>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                Strict Constraints & Failure Conditions
+              </h4>
+              <ul class="spec-list">
+                <li><strong>Strict Zero-External Dependency:</strong> No heavy external charting libraries (e.g. Highcharts/Chart.js); must be executed via semantic SVG and vanilla CSS/JS.</li>
+                <li><strong>Accessibility Requirement:</strong> Strict WCAG 2.1 AA compliance (contrast ratio ≥ 4.5:1 for body copy; full ARIA live region support for metric updates).</li>
+                <li><strong>Negative Constraint:</strong> No visual horizontal overflow at 375px width; no hallucinated CSS properties or deprecated layout modes (e.g. floats).</li>
+                <li><strong>Performance Budget:</strong> Total payload &lt; 25KB uncompressed, zero layout shifts (CLS &lt; 0.05).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Inputs -->
+        <div class="tab-pane" id="tab-inputs">
+          <div class="brief-spec-grid">
+            <div class="spec-box">
+              <h4>Input Files Supplied to Evaluator / Model</h4>
+              <ul class="spec-list">
+                <li><code>telemetry_sample.json</code>: Raw unformatted stream data containing timestamps, DO (mg/L), pH values, water temperature (°C), and battery millivolts.</li>
+                <li><code>brand_tokens.css</code>: Hex palette values (#0B0F19, #06B6D4, #10B981, #F43F5E), typographic scale (12px, 14px, 18px, 24px, 32px), border radii tokens.</li>
+                <li><code>status_matrix.pdf</code>: Engineering specification sheet detailing exact warning and critical trigger thresholds for aquaculture organisms.</li>
+              </ul>
+            </div>
+            <div class="spec-box">
+              <h4>Evaluation Stress-Tests Embedded in Inputs</h4>
+              <ul class="spec-list">
+                <li><strong>Missing Data Edge Case:</strong> Intermittent null values in sensor packet #142 to test graceful UI fallback vs. script crash.</li>
+                <li><strong>Out-of-Range Spike:</strong> pH value of 11.2 (extreme anomaly) designed to test threshold indicator styling and alert badges.</li>
+                <li><strong>Narrow Viewport String Lengths:</strong> Long localization labels ("Dissolved Oxygen Saturation Index") to test text truncation and flexbox wrap.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Gold Standard -->
+        <div class="tab-pane" id="tab-gold">
+          <div class="comparison-card gold-standard">
+            <div class="comp-header">
+              <span class="comp-badge pass">Senior Human Reference Deliverable (Shipped Standard)</span>
+              <span style="font-size: 0.8rem; color: #34d399; font-family: monospace;">Craft Score: 10 / 10</span>
+            </div>
+            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 14px;">
+              Engineered with clean DOM hierarchy, fluid CSS grid, inline SVG circular gauges with dynamic dash-offset animations, complete ARIA labels, and graceful NaN handling.
+            </p>
+            <div style="background: #0f172a; padding: 16px; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.3); font-family: monospace; font-size: 0.8rem; color: #a7f3d0; overflow-x: auto;">
+              &lt;!-- Production Clean Semantic Component Sample --&gt;<br>
+              &lt;section class="telemetry-widget" aria-label="Aquaculture Sensor Stream" aria-live="polite"&gt;<br>
+              &nbsp;&nbsp;&lt;header class="telemetry-head"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="metric-title"&gt;Zinga Pond Sector-A&lt;/h3&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="status-pill status-nominal"&gt;● Online (12s ago)&lt;/span&gt;<br>
+              &nbsp;&nbsp;&lt;/header&gt;<br>
+              &nbsp;&nbsp;&lt;div class="gauge-grid"&gt;...&lt;!-- Pure SVG gauges with CSS custom property bindings --&gt;&lt;/div&gt;<br>
+              &lt;/section&gt;
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Comparison -->
+        <div class="tab-pane" id="tab-comparison">
+          <div class="comparison-grid">
+            <div class="comparison-card gold-standard">
+              <div class="comp-header">
+                <span class="comp-badge pass">Human Reference Deliverable</span>
+                <span class="score-chip high">98 / 100</span>
+              </div>
+              <ul class="spec-list">
+                <li><strong>Typographic Hierarchy:</strong> Clear contrast between metric title (14px uppercase), reading value (28px tabular mono), and units (12px muted).</li>
+                <li><strong>Mobile Viewport:</strong> Wraps seamlessly into a stacked 1-column card at &lt; 480px with no horizontal scrollbar.</li>
+                <li><strong>Error Handling:</strong> Null sensor packet renders an amber dashed fallback state with a retry tooltip.</li>
+                <li><strong>Craft Detail:</strong> Subtle micro-transitions on value updates with zero layout reflow.</li>
+              </ul>
+            </div>
+
+            <div class="comparison-card ai-failed">
+              <div class="comp-header">
+                <span class="comp-badge fail">Frontier AI Model Output</span>
+                <span class="score-chip low">58 / 100 (Unsatisfactory)</span>
+              </div>
+              <ul class="spec-list">
+                <li><strong>Visual Flaw:</strong> Used absolute positioning on gauge labels causing severe text overlap on viewports under 600px.</li>
+                <li><strong>Hallucination:</strong> Referenced an uninstalled external library (<code>cdn.jsdelivr.net/.../chart.js</code>), violating the zero-external constraint.</li>
+                <li><strong>Accessibility Breach:</strong> Light gray text on dark teal background produced a contrast ratio of 2.4:1 (fails WCAG AA threshold of 4.5:1).</li>
+                <li><strong>Unhandled Exception:</strong> Null sensor packet threw unhandled <code>TypeError: reading 'toFixed' of null</code>, breaking the entire UI rendering.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Rubric & Rationales -->
+        <div class="tab-pane" id="tab-rubric">
+          <table class="rubric-table">
+            <thead>
+              <tr>
+                <th>Evaluation Dimension</th>
+                <th>Evaluation Criteria & Weight</th>
+                <th>Model Score</th>
+                <th>Evaluator Analytical Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Content & Specification Adherence</strong></td>
+                <td>Zero-external dependencies, constraint obedience, accurate thresholds (30%)</td>
+                <td><span class="score-chip low">4 / 10</span></td>
+                <td>Model injected external CDN script tag, violating the primary negative constraint. Failed null packet edge case.</td>
+              </tr>
+              <tr>
+                <td><strong>Visual Craft & Layout Aesthetics</strong></td>
+                <td>Typographic hierarchy, grid symmetry, spacing rhythm, micro-interactions (25%)</td>
+                <td><span class="score-chip low">6 / 10</span></td>
+                <td>Aesthetic was visually appealing at desktop scale, but failed typographic balance and element margins.</td>
+              </tr>
+              <tr>
+                <td><strong>Responsive Engineering & Robustness</strong></td>
+                <td>320px–1440px fluid reflow, no CLS, DOM semantic validity (25%)</td>
+                <td><span class="score-chip low">5 / 10</span></td>
+                <td>Broken layout on mobile viewports due to rigid pixel containers. Gauge overlapping at narrow breakpoints.</td>
+              </tr>
+              <tr>
+                <td><strong>Accessibility & Production Rigor</strong></td>
+                <td>WCAG AA contrast ratios, ARIA roles, semantic markup (20%)</td>
+                <td><span class="score-chip low">5 / 10</span></td>
+                <td>Failed color contrast ratios (2.4:1 vs required 4.5:1). Entire dashboard rendered in generic un-labelled <code>div</code> tags without ARIA live support.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 16px; padding: 12px 16px; background: rgba(99, 102, 241, 0.1); border-left: 3px solid var(--accent-indigo); font-size: 0.85rem; color: #cbd5e1;">
+            <strong>Lead Evaluator Verdict:</strong> Reject AI Output. While superficially plausible, the output exhibits critical failure modes in responsive constraint handling, strict negative-constraint compliance, and runtime error resilience that disqualify it from client shipment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Projects Showcase -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Production Portfolio</span>
+        <h2 class="section-title">Selected Engineering & Media Projects</h2>
+        <p class="section-desc">
+          A collection of real-world systems spanning computer vision pipelines, full-stack interactive web products, and automated quality assessment workflows.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar no-print">
+        <button class="filter-btn active" onclick="filterProjects('all')">All Work (8)</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Interactive Web & UI</button>
+        <button class="filter-btn" onclick="filterProjects('cv')">Vision & Media Quality</button>
+        <button class="filter-btn" onclick="filterProjects('eval')">AI & Evaluation</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: RoadMetrics -->
+        <div class="project-card" data-category="cv eval">
+          <div class="project-visual">
+            <div class="visual-pattern-cv">
+              <span class="visual-icon">🛣️</span>
+            </div>
+            <span class="project-badge-float">CV & Ground Truth</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">ML Engineer • RoadMetrics</span>
+            <h3 class="project-title">Real-Time Road & Lane Detection System</h3>
+            <p class="project-desc">
+              Engineered a real-time OpenCV-based road and lane detection pipeline for autonomous driving, achieving 95% object detection accuracy and driving a 40% improvement in production reliability.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Automated annotation workflows to cut manual labeling effort by 70%, establishing strict ground-truth verification standards for edge segmentation and lighting variation.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Object Detection</span>
+              <span class="tech-tag">Ground Truth</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Smart Image Capture -->
+        <div class="project-card" data-category="cv eval">
+          <div class="project-visual">
+            <div class="visual-pattern-cv">
+              <span class="visual-icon">📸</span>
+            </div>
+            <span class="project-badge-float">Media Quality</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">Computer Vision Project</span>
+            <h3 class="project-title">Smart Automated Image Capture & Quality Pipeline</h3>
+            <p class="project-desc">
+              Developed an automated image capture pipeline utilizing algorithmic sharpness detection, adaptive exposure calibration, and noise thresholding, improving overall visual output quality by ~40%.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Implemented objective visual metric scoring (Laplacian blur index, contrast histogram analysis) to filter out degraded or hallucinated image artifacts before ingest.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Image Processing</span>
+              <span class="tech-tag">Quality Metrics</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PIL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Full-Stack Web Application -->
+        <div class="project-card" data-category="web">
+          <div class="project-visual">
+            <div class="visual-pattern-web">
+              <span class="visual-icon">💻</span>
+            </div>
+            <span class="project-badge-float">Interactive Product</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">AI Engineer • SDS Solutions</span>
+            <h3 class="project-title">Full-Stack Enterprise Web Application & UI</h3>
+            <p class="project-desc">
+              Built a responsive full-stack web application featuring an Angular frontend and a robust Java backend. Containerized and deployed services using Docker for seamless delivery.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Enforced responsive design tokens, component modularity, accessible forms, and smooth state transitions, ensuring consistent rendering across diverse browser viewports.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Table Tennis CV -->
+        <div class="project-card" data-category="cv">
+          <div class="project-visual">
+            <div class="visual-pattern-cv">
+              <span class="visual-icon">🏓</span>
+            </div>
+            <span class="project-badge-float">Video & Motion Analysis</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">AI Engineer • SDS Solutions</span>
+            <h3 class="project-title">Real-Time Sports Motion & Ball Tracking</h3>
+            <p class="project-desc">
+              Built a high-frame-rate computer vision tracking system for table tennis analysis, applying OpenCV-based detection to accurately isolate high-speed ball trajectories and player movement.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Audited temporal video consistency, multi-frame occlusion handling, and motion blur mitigation to maintain trajectory continuity under varying arena lighting conditions.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Motion Tracking</span>
+              <span class="tech-tag">Temporal Analysis</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: ML Game Success Predictor -->
+        <div class="project-card" data-category="eval web">
+          <div class="project-visual">
+            <div class="visual-pattern-game">
+              <span class="visual-icon">🎮</span>
+            </div>
+            <span class="project-badge-float">Entertainment & Media</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">Machine Learning Project</span>
+            <h3 class="project-title">ML Game Success & Performance Predictor</h3>
+            <p class="project-desc">
+              Built supervised learning models forecasting video game market reception and commercial sales with 85% predictive accuracy, supporting data-driven publishing decisions.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Evaluated multi-dimensional entertainment features (genre alignment, player engagement metrics, platform trends) and designed visual executive summaries for stakeholders.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Data Modeling</span>
+              <span class="tech-tag">Entertainment Analytics</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Blockchain Flutter UI -->
+        <div class="project-card" data-category="web">
+          <div class="project-visual">
+            <div class="visual-pattern-web">
+              <span class="visual-icon">📱</span>
+            </div>
+            <span class="project-badge-float">Cross-Platform UI</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">Mobile / Web Engineering</span>
+            <h3 class="project-title">Blockchain Credential Verification Platform</h3>
+            <p class="project-desc">
+              Designed and implemented a sleek Flutter-based multi-platform credential verification application, cutting identity verification latency by ~60% through an intuitive verification workflow.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Focused on UI micro-interactions, responsive form ergonomics, instantaneous verification feedback states, and clear typographic hierarchy for security credentials.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Mobile & Web</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: IoT Telemetry -->
+        <div class="project-card" data-category="web cv">
+          <div class="project-visual">
+            <div class="visual-pattern-iot">
+              <span class="visual-icon">🌊</span>
+            </div>
+            <span class="project-badge-float">IoT & Telemetry UI</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">IoT & AI Systems • SDS Solutions</span>
+            <h3 class="project-title">Water-Quality Telemetry Pipeline (Zinga Project)</h3>
+            <p class="project-desc">
+              Engineered an ESP32-based aquaculture sensor pipeline and live monitoring interface for fish ponds, streaming real-time DO, pH, and temperature telemetry.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Architected clear status indicator visualizations, real-time telemetry threshold triggers, and reliable data parsing to prevent sensor data loss.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">ESP32</span>
+              <span class="tech-tag">IoT Telemetry</span>
+              <span class="tech-tag">Data Ingestion</span>
+              <span class="tech-tag">Hardware/Software UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Big Data & Life Sciences -->
+        <div class="project-card" data-category="eval">
+          <div class="project-visual">
+            <div class="visual-pattern-web">
+              <span class="visual-icon">📊</span>
+            </div>
+            <span class="project-badge-float">Enterprise Reporting</span>
+          </div>
+          <div class="project-body">
+            <span class="project-role-tag">Data Science • Topia & Teachnook</span>
+            <h3 class="project-title">Enterprise Data Modeling & Scientific Insights</h3>
+            <p class="project-desc">
+              Analyzed life-science datasets exceeding 10,000 records (Topia) and exploratory data analysis across &gt;1TB multi-source datasets (Teachnook), improving predictive accuracy by 25%.
+            </p>
+            <div class="eval-highlight-box">
+              <div class="eval-highlight-title">Craft & Evaluation Focus</div>
+              <div class="eval-highlight-desc">
+                Authored structured executive reports and data visualizations translating complex statistical anomalies into clear, actionable scientific decisions.
+              </div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Statistical Modeling</span>
+              <span class="tech-tag">EDA</span>
+              <span class="tech-tag">Enterprise Decks</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Professional History</span>
+        <h2 class="section-title">Work Experience & Industry Roles</h2>
+        <p class="section-desc">
+          Over 2.5 years of intensive applied engineering, model optimization, full-stack web development, and dataset benchmarking.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- SDS Solutions -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">AI Engineer</h3>
+                <div class="timeline-company">SDS Solutions • Surat, India</div>
+              </div>
+              <span class="timeline-date">Apr 2026 – Sep 2026</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built a computer-vision system for real-time table tennis tracking and analysis, applying OpenCV-based detection to capture ball and player movement.</li>
+              <li>Developed an IoT sensor pipeline for aquaculture water-quality monitoring on the Zinga fish project, covering sensor data ingestion and real-time telemetry.</li>
+              <li>Engineered a full-stack web application featuring an Angular frontend and Java backend, researching and validating production-ready technical approaches.</li>
+              <li>Containerized and deployed services using Docker, streamlining the multi-environment deployment workflow.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RoadMetrics -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">ML Engineer</h3>
+                <div class="timeline-company">RoadMetrics • Bengaluru, India (Remote)</div>
+              </div>
+              <span class="timeline-date">May 2025 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered a real-time OpenCV-based road and lane detection system for an autonomous driving pipeline, automating annotation workflows to cut manual labeling effort by 70%.</li>
+              <li>Optimized detection models to deliver 95% real-time object detection accuracy, driving a 40% improvement in overall system reliability across production environments.</li>
+              <li>Authored verification protocols to evaluate model inference performance under adverse visual conditions (glare, occlusions, rainfall).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Topia Life Science -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Data Science Intern</h3>
+                <div class="timeline-company">Topia Life Science • Vadodara, India</div>
+              </div>
+              <span class="timeline-date">May 2024 – Dec 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led the design and application of machine learning models to analyze life-science datasets exceeding 10,000 records, surfacing insights that guided research strategy.</li>
+              <li>Owned model validation and tuning end-to-end, improving prediction accuracy by 25% and strengthening confidence in downstream research outcomes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Teachnook -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Data Science & Data Analyst Intern</h3>
+                <div class="timeline-company">Teachnook • Bengaluru, India (Remote)</div>
+              </div>
+              <span class="timeline-date">Apr 2023 – Jun 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Directed exploratory data analysis across datasets exceeding 1TB, identifying key patterns and data quality issues that shaped downstream modeling architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rinex -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Machine Learning Intern</h3>
+                <div class="timeline-company">Rinex • Bengaluru, India (Remote)</div>
+              </div>
+              <span class="timeline-date">Dec 2022 – Jan 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed, implemented, and benchmarked 10 machine learning models — including 5+ supervised learning models for classification and regression — establishing a strong foundation in model evaluation.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical & Creative Tooling -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Technical & Creative Tooling</h2>
+        <p class="section-desc">
+          Proficient in production frameworks, visual media libraries, and AI evaluation toolkits.
+        </p>
+      </div>
+
+      <div class="skills-category-grid">
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Visual Media & Vision
+          </h3>
+          <div class="pill-cloud">
+            <span class="pill-item">OpenCV</span>
+            <span class="pill-item">Image Processing</span>
+            <span class="pill-item">Video Stream Analysis</span>
+            <span class="pill-item">Matplotlib</span>
+            <span class="pill-item">PIL / Pillow</span>
+            <span class="pill-item">Figma Design Workflows</span>
+            <span class="pill-item">Canva</span>
+            <span class="pill-item">Visual Artifact Auditing</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Interactive Web & UI
+          </h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Angular</span>
+            <span class="pill-item">HTML5 & Semantic DOM</span>
+            <span class="pill-item">CSS3 / Flexbox / Grid</span>
+            <span class="pill-item">JavaScript (ES6+)</span>
+            <span class="pill-item">Flutter UI</span>
+            <span class="pill-item">Responsive Design</span>
+            <span class="pill-item">REST API Design</span>
+            <span class="pill-item">WCAG AA Accessibility</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            AI Evaluation & Benchmarking
+          </h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Ground Truth Curation</span>
+            <span class="pill-item">Brief Authoring</span>
+            <span class="pill-item">Rubric Engineering</span>
+            <span class="pill-item">Side-by-Side Grading</span>
+            <span class="pill-item">Error Taxonomy</span>
+            <span class="pill-item">Automated Annotation</span>
+            <span class="pill-item">Hallucination Detection</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            Backend & Engineering
+          </h3>
+          <div class="pill-cloud">
+            <span class="pill-item">Python</span>
+            <span class="pill-item">FastAPI / Flask / Django</span>
+            <span class="pill-item">Java</span>
+            <span class="pill-item">Docker Containerization</span>
+            <span class="pill-item">Git / GitHub CI/CD</span>
+            <span class="pill-item">SQL & DBMS</span>
+            <span class="pill-item">C++ / C</span>
+            <span class="pill-item">Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mercor Submission Quick Action Callout -->
+  <section class="no-print">
+    <div class="container">
+      <div class="submission-callout">
+        <h2 class="submission-title">Ready for Mercor Portfolio Submission</h2>
+        <p class="submission-text">
+          This portfolio is structured specifically for Mercor’s <strong>Creative & Media Expert</strong> role. You can submit either via the public GitHub link or export a print-optimized PDF file.
+        </p>
+
+        <div class="submission-actions">
+          <button class="btn btn-primary" onclick="copyPortfolioLink()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span>Copy Public URL for Field 2 (dhruvdesai263.github.io)</span>
+          </button>
+          
+          <button class="btn btn-secondary" onclick="window.print()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Save Clean PDF for Field 1 (Upload File)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Dhruv Desai • Portfolio & AI Evaluation Dossier • Charusat University (2025)</p>
+      <p style="margin-top: 6px; font-size: 0.78rem;">
+        Contact: <a href="mailto:DhruvDesai3263@gmail.com" style="color: var(--accent-cyan);">DhruvDesai3263@gmail.com</a> | +91 9510312885 | Surat, Gujarat, India
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Portfolio link copied to clipboard!</div>
+
+  <!-- JavaScript -->
+  <script>
+    // Tab switching for Case Study
+    function switchTab(evt, tabId) {
+      const tabPanes = document.querySelectorAll('.tab-pane');
+      tabPanes.forEach(pane => pane.classList.remove('active'));
+
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    // Filter projects
+    function filterProjects(category) {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const cats = card.getAttribute('data-category') || '';
+          if (cats.includes(category)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Copy live portfolio URL
+    function copyPortfolioLink() {
+      const url = "https://dhruvdesai263.github.io/";
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast("Portfolio Link Copied: https://dhruvdesai263.github.io/");
         });
+      } else {
+        const dummy = document.createElement("input");
+        document.body.appendChild(dummy);
+        dummy.value = url;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        showToast("Portfolio Link Copied: https://dhruvdesai263.github.io/");
+      }
+    }
 
-        // Add stagger animation on scroll for project cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.project-card, .exp-item').forEach(card => {
-            observer.observe(card);
-        });
-    </script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+  </script>
 </body>
 </html>
